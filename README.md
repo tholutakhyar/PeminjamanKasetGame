@@ -1,7 +1,7 @@
 # NetBeans + MySQL Project
 Download:
-NetBeans here https://netbeans.org/downloads/
-MySQL (xampp) here https://www.apachefriends.org/download.html
+- NetBeans here https://netbeans.org/downloads/
+- MySQL (xampp) here https://www.apachefriends.org/download.html
 
 # Peminjaman Kaset Game (Rent DVD Game App)
 My Final Project
