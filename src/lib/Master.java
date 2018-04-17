@@ -49,6 +49,36 @@ public class Master {
         return resultCv;
     }
     
+    public String GetName(int UserId) throws SQLException {
+        String resultnm = "";
+        lib.MySQL MySQL = new lib.MySQL();
+            
+        String sql = "select * from user where user_id = '"+UserId+ "'";
+        MasterResultSet = MySQL.MySQLQuery(sql);
+            
+        if (MasterResultSet.next()) {
+            resultnm = MasterResultSet.getString("user_namalengkap"); 
+        } else {
+            resultnm = String.valueOf(UserId);
+        }
+        
+        return resultnm;
+    }
+    
+    public String GetStatus(int Status) {
+        String resultnm = "";
+        
+        if (Status == 0) {
+            //false
+            resultnm = "Belum Kembali";
+        } else if (Status == 1) {
+            //true
+            resultnm = "Sudah Kembali";
+        }
+        
+        return resultnm;
+    }
+    
     public void showTholutDialogOk(String title, String msg, String icon) {
         gui.DialogOkFrame DialogOk = new gui.DialogOkFrame();
         String DataIcon = "LogoInformation.png";

@@ -187,4 +187,50 @@ public class MySQL {
         
         return returnData;
     }
+    
+    // Method called for get Database Kaset
+    public String[][] MySQLGetSewa(String FindWhat, String TypeWhat) throws SQLException {
+        Connection Conn = (Connection) MySQL.MySQLConnection();
+        
+        // Checking Type of Data
+        if (null != TypeWhat) switch (TypeWhat) {
+            case "ID":
+                TypeWhat = "ts_id";
+                break;
+            default:
+                TypeWhat = "ts_id";
+                break;
+        }
+            
+        String[] d_as = {FindWhat, TypeWhat};
+        String query = "select * from transaksi";
+        
+        // Counting Data
+        System.out.println("[Lib][MySQL] Running: ["+query+"]");
+        MySQLResultSet = MySQLStatement.executeQuery(query);
+        MySQLResultSet.last(); 
+        int total = MySQLResultSet.getRow();
+        String returnData[][] = new String[total][9];
+        System.out.println("[Lib][MySQL] Total Data ["+total+"]");
+        
+        // Inserting Data to Array
+        System.out.println("[Lib][MySQL] Running: ["+query+"]");
+        MySQLResultSet = MySQLStatement.executeQuery(query);
+        int x = 0;
+        while (MySQLResultSet.next()) {
+             returnData[x][0] = MySQLResultSet.getString("ts_id");
+             returnData[x][1] = MySQLResultSet.getString("pelanggan_id");
+             returnData[x][2] = MySQLResultSet.getString("karyawan_id");
+             returnData[x][3] = MySQLResultSet.getString("ts_status_kembali");
+             returnData[x][4] = MySQLResultSet.getString("ts_subtotal");
+             returnData[x][5] = MySQLResultSet.getString("ts_diskon");
+             returnData[x][6] = MySQLResultSet.getString("ts_bayar");
+             returnData[x][7] = MySQLResultSet.getString("ts_tgl_peminjaman");
+             returnData[x][8] = MySQLResultSet.getString("ts_tgl_pengembalian");
+             x++;
+        }
+        System.out.println("[Lib][MySQL] "+total+" Data Kaset Success Loaded");
+        
+        return returnData;
+    }
 }
