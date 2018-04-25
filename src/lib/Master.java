@@ -65,6 +65,22 @@ public class Master {
         return resultnm;
     }
     
+    public String GetData(int UserId) throws SQLException {
+        String resultnm = "";
+        lib.MySQL MySQL = new lib.MySQL();
+            
+        String sql = "select * from user where user_id = '"+UserId+ "'";
+        MasterResultSet = MySQL.MySQLQuery(sql);
+            
+        if (MasterResultSet.next()) {
+            resultnm = MasterResultSet.getString("user_namalengkap"); 
+        } else {
+            resultnm = String.valueOf(UserId);
+        }
+        
+        return resultnm;
+    }
+    
     public String GetStatus(int Status) {
         String resultnm = "";
         

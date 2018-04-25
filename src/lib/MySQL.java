@@ -147,6 +147,9 @@ public class MySQL {
             case "Kategori":
                 TypeWhat = "kaset_kategori";
                 break;
+            case "SewaKaset":
+                TypeWhat = "SewaKaset";
+                break;
             default:
                 TypeWhat = "kaset_id";
                 break;
@@ -160,6 +163,9 @@ public class MySQL {
             query = "select * from kaset where "+d_as[1]+" like '%"+d_as[0]+"%'";
         }
         
+        if (TypeWhat == "SewaKaset") {
+            query = "select * from kaset where kaset_id = '"+FindWhat+"'";
+        }
         
         // Counting Data
         System.out.println("[Lib][MySQL] Running: ["+query+"]");
@@ -197,20 +203,27 @@ public class MySQL {
             case "ID":
                 TypeWhat = "ts_id";
                 break;
+            case "SewaDetil":
+                TypeWhat = "SewaDetil";
+                break;
             default:
                 TypeWhat = "ts_id";
                 break;
         }
             
         String[] d_as = {FindWhat, TypeWhat};
-        String query = "select * from transaksi";
+        String query = "select * from transaksi where status_pending = '0'";
+        
+        if ("SewaDetil".equals(TypeWhat)) {
+            query = "select * from transaksi where ts_id = '"+FindWhat+"' and status_pending = '0'";
+        }
         
         // Counting Data
         System.out.println("[Lib][MySQL] Running: ["+query+"]");
         MySQLResultSet = MySQLStatement.executeQuery(query);
         MySQLResultSet.last(); 
         int total = MySQLResultSet.getRow();
-        String returnData[][] = new String[total][9];
+        String returnData[][] = new String[total][10];
         System.out.println("[Lib][MySQL] Total Data ["+total+"]");
         
         // Inserting Data to Array
@@ -227,9 +240,41 @@ public class MySQL {
              returnData[x][6] = MySQLResultSet.getString("ts_bayar");
              returnData[x][7] = MySQLResultSet.getString("ts_tgl_peminjaman");
              returnData[x][8] = MySQLResultSet.getString("ts_tgl_pengembalian");
+             returnData[x][8] = MySQLResultSet.getString("status_pending");
              x++;
         }
         System.out.println("[Lib][MySQL] "+total+" Data Kaset Success Loaded");
+        
+        return returnData;
+    }
+    
+    // Method called for get Database Kaset
+    public String[][] MySQLGetDetilSewa(String ID_Bois) throws SQLException {
+        Connection Conn = (Connection) MySQL.MySQLConnection();
+        
+        String query = "select * from transaksi_detil where ts_id = '"+ID_Bois+"'";
+        
+        // Counting Data
+        System.out.println("[Lib][MySQL] Running: ["+query+"]");
+        MySQLResultSet = MySQLStatement.executeQuery(query);
+        MySQLResultSet.last(); 
+        int total = MySQLResultSet.getRow();
+        String returnData[][] = new String[total][4];
+        System.out.println("[Lib][MySQL] Total Data ["+total+"]");
+        
+        // Inserting Data to Array
+        System.out.println("[Lib][MySQL] Running: ["+query+"]");
+        MySQLResultSet = MySQLStatement.executeQuery(query);
+        int x = 0;
+        while (MySQLResultSet.next()) {
+             returnData[x][0] = MySQLResultSet.getString("ts_detil_id");
+             returnData[x][1] = MySQLResultSet.getString("ts_id");
+             returnData[x][2] = MySQLResultSet.getString("kaset_id");
+             returnData[x][3] = MySQLResultSet.getString("ts_detil_harga");
+             returnData[x][3] = MySQLResultSet.getString("ts_detil_jumlah");
+             x++;
+        }
+        System.out.println("[Lib][MySQL] "+total+" Data Transaksi Detil Success Loaded");
         
         return returnData;
     }
