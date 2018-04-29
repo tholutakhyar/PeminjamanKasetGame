@@ -41,6 +41,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     DefaultTableModel DTM_CariUser;
     DefaultTableModel DTM_CariKaset;
     DefaultTableModel DTM_SewaBaruTransaksi;
+    DefaultTableModel DTM_Laporan;
     
     // Data Login Info
     private int AuthUserId;
@@ -52,6 +53,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     private int DataDeleteId;
     private String DataDeleteIdString;
     
+    
+    private String BukaTransaksiIdWhat;
     
     // Data Type UbahTambah
     
@@ -113,7 +116,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardDetilSewaTable1.setModel(DTM_SewaBaruTransaksi);
         DashboardDetilSewaTable2.setModel(DTM_SewaBaruTransaksi);
         DashboardDetilSewaTable3.setModel(DTM_SewaBaruTransaksi);
-        
+        DTM_Laporan = new DefaultTableModel(new String[]{"ID","Penyewa","Karyawan","Status","Subtotal","Diskon","Bayar","Peminjaman","Pengembalian"},0);
+        DashboardSewaTable1.setModel(DTM_Laporan);
         
     }
 
@@ -266,6 +270,9 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFNama1 = new javax.swing.JLabel();
         TBFTglPeminjaman = new javax.swing.JLabel();
         TBFTglPengembalian = new javax.swing.JLabel();
+        PengaturanButtonBatal7 = new javax.swing.JLabel();
+        PengaturanButtonBatal8 = new javax.swing.JLabel();
+        DashboardMUserTambahButton12 = new javax.swing.JLabel();
         TransaksiBaruFrame = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
         PengaturanYesNoHeader8 = new javax.swing.JPanel();
@@ -408,6 +415,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetSegarkanButton1 = new javax.swing.JLabel();
         DashboardContentLaporan = new javax.swing.JPanel();
         DashboardContentLaporanTitle = new javax.swing.JLabel();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        DashboardContentLaporanTitle1 = new javax.swing.JLabel();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        DashboardMKasetScrollPanel2 = new javax.swing.JScrollPane();
+        DashboardSewaTable1 = new javax.swing.JTable();
+        DashboardMKasetCariButton3 = new javax.swing.JLabel();
 
         DeleteDialogYesNo.setUndecorated(true);
         DeleteDialogYesNo.setSize(new java.awt.Dimension(400, 300));
@@ -2328,6 +2341,44 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFTglPengembalian.setForeground(new java.awt.Color(255, 255, 255));
         TBFTglPengembalian.setText("Tanggal Pengembalian: 20-02-2018");
 
+        PengaturanButtonBatal7.setBackground(new java.awt.Color(114, 137, 218));
+        PengaturanButtonBatal7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        PengaturanButtonBatal7.setForeground(new java.awt.Color(255, 255, 255));
+        PengaturanButtonBatal7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        PengaturanButtonBatal7.setText("Cetak");
+        PengaturanButtonBatal7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PengaturanButtonBatal7.setOpaque(true);
+        PengaturanButtonBatal7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PengaturanButtonBatal7MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                PengaturanButtonBatal7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                PengaturanButtonBatal7MouseExited(evt);
+            }
+        });
+
+        PengaturanButtonBatal8.setBackground(new java.awt.Color(114, 137, 218));
+        PengaturanButtonBatal8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        PengaturanButtonBatal8.setForeground(new java.awt.Color(255, 255, 255));
+        PengaturanButtonBatal8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        PengaturanButtonBatal8.setText("Mengembalikan");
+        PengaturanButtonBatal8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PengaturanButtonBatal8.setOpaque(true);
+        PengaturanButtonBatal8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PengaturanButtonBatal8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                PengaturanButtonBatal8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                PengaturanButtonBatal8MouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -2337,20 +2388,24 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(DashboardDetilSewaScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
-                        .addGap(24, 24, 24))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TBFTglPengembalian)
-                            .addComponent(TBFTglPeminjaman)
-                            .addComponent(TBFNama1))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TBFNama)
                             .addComponent(TBFTransaksiId)
                             .addComponent(TBFUserId))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TBFTglPengembalian)
+                            .addComponent(TBFTglPeminjaman)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(TBFNama1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(PengaturanButtonBatal8, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(PengaturanButtonBatal7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(DashboardDetilSewaScrollPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 25, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2366,22 +2421,55 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addComponent(TBFTglPeminjaman)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TBFTglPengembalian)
-                .addGap(20, 20, 20)
-                .addComponent(TBFNama1)
+                .addGap(7, 7, 7)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(TBFNama1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(PengaturanButtonBatal7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(PengaturanButtonBatal8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DashboardDetilSewaScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
+
+        DashboardMUserTambahButton12.setBackground(new java.awt.Color(114, 137, 218));
+        DashboardMUserTambahButton12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        DashboardMUserTambahButton12.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardMUserTambahButton12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton12.setText("Kembali");
+        DashboardMUserTambahButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DashboardMUserTambahButton12.setOpaque(true);
+        DashboardMUserTambahButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DashboardMUserTambahButton12MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                DashboardMUserTambahButton12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                DashboardMUserTambahButton12MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout TransaksiBukaFrameLayout = new javax.swing.GroupLayout(TransaksiBukaFrame.getContentPane());
         TransaksiBukaFrame.getContentPane().setLayout(TransaksiBukaFrameLayout);
         TransaksiBukaFrameLayout.setHorizontalGroup(
             TransaksiBukaFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(TransaksiBukaFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(TransaksiBukaFrameLayout.createSequentialGroup()
+                    .addGap(295, 295, 295)
+                    .addComponent(DashboardMUserTambahButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(295, Short.MAX_VALUE)))
         );
         TransaksiBukaFrameLayout.setVerticalGroup(
             TransaksiBukaFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(TransaksiBukaFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(TransaksiBukaFrameLayout.createSequentialGroup()
+                    .addGap(183, 183, 183)
+                    .addComponent(DashboardMUserTambahButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(230, Short.MAX_VALUE)))
         );
 
         TransaksiBaruFrame.setUndecorated(true);
@@ -4665,21 +4753,98 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardContentLaporanTitle.setForeground(new java.awt.Color(255, 255, 255));
         DashboardContentLaporanTitle.setText("Laporan");
 
+        jDateChooser2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jDateChooser2PropertyChange(evt);
+            }
+        });
+
+        DashboardContentLaporanTitle1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        DashboardContentLaporanTitle1.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentLaporanTitle1.setText("S/d");
+
+        jDateChooser3.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jDateChooser3PropertyChange(evt);
+            }
+        });
+
+        DashboardMKasetScrollPanel2.setBorder(null);
+        DashboardMKasetScrollPanel2.setForeground(new java.awt.Color(51, 51, 51));
+        DashboardMKasetScrollPanel2.setOpaque(false);
+
+        DashboardSewaTable1.setForeground(new java.awt.Color(51, 51, 51));
+        DashboardSewaTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                { new Integer(1), "Tholut", "Akhyar"},
+                { new Integer(2), "Stacia", "Lewis"},
+                { new Integer(3), "Kuriyama", "Mirai"},
+                { new Integer(4), "Hanekawa", "Tsubasa"}
+            },
+            new String [] {
+                "No", "First Name", "Last Name"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        DashboardSewaTable1.setGridColor(new java.awt.Color(255, 255, 255));
+        DashboardSewaTable1.setSelectionBackground(new java.awt.Color(114, 137, 218));
+        DashboardMKasetScrollPanel2.setViewportView(DashboardSewaTable1);
+
+        DashboardMKasetCariButton3.setBackground(new java.awt.Color(114, 137, 218));
+        DashboardMKasetCariButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        DashboardMKasetCariButton3.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardMKasetCariButton3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetCariButton3.setText("Cetak");
+        DashboardMKasetCariButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DashboardMKasetCariButton3.setOpaque(true);
+
         javax.swing.GroupLayout DashboardContentLaporanLayout = new javax.swing.GroupLayout(DashboardContentLaporan);
         DashboardContentLaporan.setLayout(DashboardContentLaporanLayout);
         DashboardContentLaporanLayout.setHorizontalGroup(
             DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(783, Short.MAX_VALUE))
+                .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
+                        .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(DashboardContentLaporanTitle1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(231, Short.MAX_VALUE))
+            .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(DashboardMKasetScrollPanel2)
+                    .addContainerGap()))
         );
         DashboardContentLaporanLayout.setVerticalGroup(
             DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(403, Short.MAX_VALUE))
+                .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DashboardContentLaporanTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDateChooser3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 352, Short.MAX_VALUE)
+                .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
+                    .addGap(63, 63, 63)
+                    .addComponent(DashboardMKasetScrollPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(66, Short.MAX_VALUE)))
         );
 
         DashboardContent.add(DashboardContentLaporan, "card5");
@@ -4729,11 +4894,45 @@ public class DashboardFrame extends javax.swing.JFrame {
         Dsbd.LoadTableData("User","","");
         Dsbd.LoadTableData("Kaset","","");
         Dsbd.LoadTableData("Sewa","","");
+        Dsbd.LoadTableData("Laporan","","");
         
         if (!"Pemilik".equals(LocalRankName)) {
             Dsbd.DashboardLaporanButton.setVisible(false);
         }
     }        
+    
+    private void BatalTransaksi() {
+        System.out.println("batal transaksi (hapus data transaksi)");
+        
+        TransaksiInputReset();
+        
+        SewaProcessAwal.setVisible(true);
+        SewaProcessKedua.setVisible(false);
+        SewaProcessAkhir.setVisible(false);
+        
+        try {
+            int hasil = MySQL.MySQLUpdate("DELETE FROM transaksi WHERE ts_id = '"+baruTransaksi+"'");
+            
+            if (hasil == 1) {
+                System.out.println("data ter delete");
+            } else {
+                System.out.println("data gagal delete");
+            }
+            
+            int hasil2 = MySQL.MySQLUpdate("DELETE FROM transaksi_detil WHERE ts_id = '"+baruTransaksi+"'");
+            
+            if (hasil2 == 1) {
+                System.out.println("data ter delete");
+            } else {
+                System.out.println("data gagal delete");
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        TransaksiBaruFrame.setVisible(false);
+        LoadTableData("Sewa","","");
+    }
     
     private void LoadTableData(String DataWhat, String FindWhat, String TypeWhat) {
         try {
@@ -4803,6 +5002,19 @@ public class DashboardFrame extends javax.swing.JFrame {
 
                 while (xd < data_sql.length) {
                     DTM_CariKaset.addRow(new Object[]{data_sql[xd][0],data_sql[xd][1],data_sql[xd][3]});
+                    xd++;
+                }
+            } else if (DataWhat == "Laporan") {
+                while (DTM_Laporan.getRowCount() > 0) {
+                    DTM_Laporan.removeRow(0);
+                }
+
+                String[][] data_sql = MySQL.MySQLGetSewa(FindWhat, TypeWhat);
+
+                int xd = 0;
+
+                while (xd < data_sql.length) {
+                    DTM_Laporan.addRow(new Object[]{data_sql[xd][0],Master.GetName(Integer.parseInt(data_sql[xd][1])),Master.GetName(Integer.parseInt(data_sql[xd][2])),Master.GetStatus(Integer.parseInt(data_sql[xd][3])),data_sql[xd][4],data_sql[xd][5],data_sql[xd][6],data_sql[xd][7],data_sql[xd][8]});
                     xd++;
                 }
             }
@@ -4958,6 +5170,19 @@ public class DashboardFrame extends javax.swing.JFrame {
         }
     }
     
+    private void TransaksiInputReset() {
+        TBFUserId1.setText("User Id: 0");
+        TBFNama2.setText("Nama Penyewa: Tidak Ada");
+        TBFTglPeminjaman1.setText("Alamat: Tidak Ada");
+        TBFTglPengembalian1.setText("Nik KTP: 00000000000000");
+        TBFUserId2.setText("Kaset Id: 0");
+        TBFNama4.setText("Judul: Tidak Ada");
+        TBFTglPeminjaman2.setText("Jumlah Keping: 0");
+        TBFTglPengembalian3.setText("Total: Rp 0");
+        TBFTransaksiId2.setText("Total: Rp 0");
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Kosong"}));
+    }
+    
     private void PopupKasetUbahTambah(String Type, String ItemID) throws ParseException {
         ResetCheckboxKaset();
         if ("Ubah".equals(Type)) {
@@ -5070,6 +5295,95 @@ public class DashboardFrame extends javax.swing.JFrame {
         }
     }
     
+    private void SettingSaveUser() throws SQLException {
+        DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+        String tmp_dte22 = fmt.format(this.PengaturanTanggalLahirInput.getDate());
+        
+        int hasil = MySQL.MySQLUpdate("UPDATE user SET username = '"+PengaturanUsernameInput.getText()+"', password = '"+PengaturanPasswordInput.getText()+"',user_namalengkap = '"+PengaturanNMLengkapInput.getText()+"',user_alamat = '"+PengaturanAlamatInput.getText()+"',user_nik_ktp = '"+PengaturanNikKtpInput.getText()+"' ,user_telp = '"+PengaturanTeleponInput.getText()+"',user_email = '"+PengaturanEmailInput.getText()+"',user_tgl_lahir = '"+tmp_dte22+"' WHERE user_id = '"+AuthUserId+"' ");
+        if (hasil == 1) {
+            System.out.println("data ter update");
+            Master.showTholutDialogOk("Success", "Data berhasil di ubah", "Success");
+            LoadTableData("User","","");
+            UbahTambahUserDialog.setVisible(false);
+        } else {
+            System.out.println("data gagal di update");
+            Master.showTholutDialogOk("Failed", "Data gagal di ubah", "Failed");
+        }
+    }
+    
+    private void LaporanAinx() {
+        System.out.println("laporan refresh ea");
+        if (jDateChooser2.getDate() != null && jDateChooser3.getDate() != null) {
+            DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+            String dari = fmt.format(this.jDateChooser2.getDate());
+            DateFormat fmt2 = new SimpleDateFormat("yyyy-MM-dd");
+            String sampai = fmt2.format(this.jDateChooser3.getDate());
+            System.out.println("Rekap Data Dari ["+dari+"] sampai ["+sampai+"]");
+            while (DTM_Laporan.getRowCount() > 0) {
+                DTM_Laporan.removeRow(0);
+            }
+
+            try {
+                String[][] data_sql = MySQL.MySQLGetLaporan(dari, sampai);
+                
+                int xd = 0;
+
+                while (xd < data_sql.length) {
+                    DTM_Laporan.addRow(new Object[]{data_sql[xd][0],Master.GetName(Integer.parseInt(data_sql[xd][1])),Master.GetName(Integer.parseInt(data_sql[xd][2])),Master.GetStatus(Integer.parseInt(data_sql[xd][3])),data_sql[xd][4],data_sql[xd][5],data_sql[xd][6],data_sql[xd][7],data_sql[xd][8]});
+                    xd++;
+                }
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+    }
+    
+    private void TransaksiBaruKuy() {
+        try {
+                DashboardResultSet = MySQL.MySQLQuery("select * from transaksi order by ts_id desc");
+                if (DashboardResultSet.next()) {
+                    String nofak = DashboardResultSet.getString("ts_id").substring(4);
+                    String AN = "" + (Integer.parseInt(nofak) + 1);
+                    String Nol = "";
+
+                    if(AN.length()==1) {
+                        Nol = "00000";
+                    } else if(AN.length()==2) {
+                        Nol = "0000";
+                    } else if(AN.length()==3) {
+                        Nol = "000";
+                    } else if(AN.length()==4) {
+                        Nol = "00";
+                    } else if(AN.length()==5) {
+                        Nol = "0";
+                    } else if(AN.length()==6) {
+                        Nol = "";
+                    }
+                
+                    TBFTransaksiId1.setText("TRKS" + Nol + AN);
+                } else {
+                    TBFTransaksiId1.setText("TRKS000001");
+                }
+                baruTransaksi = TBFTransaksiId1.getText();
+                java.sql.Date date_today2 = new java.sql.Date(new java.util.Date().getTime());
+                TBFTransaksiId8.setText("Tanggal Peminjaman   : "+date_today2);
+                TBFTransaksiId15.setText("Tanggal Peminjaman   : "+date_today2);
+                int mantap = MySQL.MySQLUpdate("INSERT INTO `transaksi` (`ts_id`, `pelanggan_id`, `karyawan_id`, `ts_status_kembali`, `ts_subtotal`, `ts_diskon`, `ts_bayar`, `ts_tgl_peminjaman`, `ts_tgl_pengembalian`,`status_pending`) VALUES ('"+baruTransaksi+"', '0', '"+AuthUserId+"', '0', '0', '0', '0', '"+date_today2+"', '"+date_today2+"', '1')");
+                if (mantap==1) {
+                    System.out.println("Transaksi Baru");
+                }
+        } catch (SQLException ex) {
+                System.out.println(ex);
+        }
+        TransaksiBaruFrame.setVisible(true);
+               
+        while (DTM_SewaBaruTransaksi.getRowCount() > 0) {
+            DTM_SewaBaruTransaksi.removeRow(0);
+        }
+    }
+    
     private void BukaTransaksiDetil(String ItemID) throws ParseException {
         try {
             String data_sql[][] = MySQL.MySQLGetDetilSewa(ItemID);
@@ -5077,6 +5391,8 @@ public class DashboardFrame extends javax.swing.JFrame {
             while (DTM_DetilSewa.getRowCount() > 0) {
                 DTM_DetilSewa.removeRow(0);
             }
+            
+            BukaTransaksiIdWhat = ItemID;
 
             int xd = 0;
             while (xd < data_sql.length) {
@@ -5093,6 +5409,12 @@ public class DashboardFrame extends javax.swing.JFrame {
             TBFTglPeminjaman.setText("Tanggal Peminjaman: "+data_prv[0][7]);
             TBFTglPengembalian.setText("Tanggal Pengembalian: "+data_prv[0][8]);
             TransaksiBukaFrame.setVisible(true);
+            
+            if ("0".equals(data_prv[0][3])) {
+                PengaturanButtonBatal8.setText("Mengembalikan");
+            } else if ("1".equals(data_prv[0][3])) {
+                PengaturanButtonBatal8.setText("Sudah Kembali");
+            }
             
         } catch (SQLException ex) {
                 System.out.println(ex);
@@ -6300,7 +6622,12 @@ public class DashboardFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_PengaturanButtonBatalMouseExited
 
     private void PengaturanButtonSimpanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonSimpanMouseClicked
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            SettingSaveUser();
+        } catch (SQLException ex) {
+            Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_PengaturanButtonSimpanMouseClicked
 
     private void PengaturanButtonSimpanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonSimpanMouseEntered
@@ -6444,47 +6771,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void DashboardMKasetTambahButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetTambahButton1MouseClicked
         // TODO add your handling code here:
-        
-        try {
-                DashboardResultSet = MySQL.MySQLQuery("select * from transaksi order by ts_id desc");
-                if (DashboardResultSet.next()) {
-                    String nofak = DashboardResultSet.getString("ts_id").substring(4);
-                    String AN = "" + (Integer.parseInt(nofak) + 1);
-                    String Nol = "";
-
-                    if(AN.length()==1) {
-                        Nol = "00000";
-                    } else if(AN.length()==2) {
-                        Nol = "0000";
-                    } else if(AN.length()==3) {
-                        Nol = "000";
-                    } else if(AN.length()==4) {
-                        Nol = "00";
-                    } else if(AN.length()==5) {
-                        Nol = "0";
-                    } else if(AN.length()==6) {
-                        Nol = "";
-                    }
-                
-                    TBFTransaksiId1.setText("TRKS" + Nol + AN);
-                } else {
-                    TBFTransaksiId1.setText("TRKS000001");
-                }
-                baruTransaksi = TBFTransaksiId1.getText();
-                java.sql.Date date_today2 = new java.sql.Date(new java.util.Date().getTime());
-                TBFTransaksiId8.setText("Tanggal Peminjaman   :    "+date_today2);
-                int mantap = MySQL.MySQLUpdate("INSERT INTO `transaksi` (`ts_id`, `pelanggan_id`, `karyawan_id`, `ts_status_kembali`, `ts_subtotal`, `ts_diskon`, `ts_bayar`, `ts_tgl_peminjaman`, `ts_tgl_pengembalian`,`status_pending`) VALUES ('"+baruTransaksi+"', '0', '"+AuthUserId+"', '0', '0', '0', '0', '"+date_today2+"', '"+date_today2+"', '1')");
-                if (mantap==1) {
-                    System.out.println("Transaksi Baru");
-                }
-        } catch (SQLException ex) {
-                System.out.println(ex);
-        }
-        TransaksiBaruFrame.setVisible(true);
-               
-        while (DTM_SewaBaruTransaksi.getRowCount() > 0) {
-            DTM_SewaBaruTransaksi.removeRow(0);
-        }
+        TransaksiBaruKuy();
     }//GEN-LAST:event_DashboardMKasetTambahButton1MouseClicked
 
     private void DashboardMKasetTambahButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetTambahButton1MouseEntered
@@ -6661,40 +6948,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void DashboardMUserTambahButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton4MouseClicked
         // TODO add your handling code here:
-        System.out.println("batal transaksi (hapus data transaksi)");
-        
-        TBFUserId1.setText("User Id: 0");
-        TBFNama2.setText("Nama Penyewa: Tidak Ada");
-        TBFTglPeminjaman1.setText("Alamat: Tidak Ada");
-        TBFTglPengembalian1.setText("Nik KTP: 00000000000000");
-        TBFUserId2.setText("Kaset Id: 0");
-        TBFNama4.setText("Judul: Tidak Ada");
-        TBFTglPeminjaman2.setText("Jumlah Keping: 0");
-        TBFTglPengembalian3.setText("Total: Rp 0");
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Kosong"}));
-        
-        try {
-            int hasil = MySQL.MySQLUpdate("DELETE FROM transaksi WHERE ts_id = '"+baruTransaksi+"'");
-            
-            if (hasil == 1) {
-                System.out.println("data ter delete");
-            } else {
-                System.out.println("data gagal delete");
-            }
-            
-            int hasil2 = MySQL.MySQLUpdate("DELETE FROM transaksi_detil WHERE ts_id = '"+baruTransaksi+"'");
-            
-            if (hasil2 == 1) {
-                System.out.println("data ter delete");
-            } else {
-                System.out.println("data gagal delete");
-            }
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        TransaksiBaruFrame.setVisible(false);
-        LoadTableData("Sewa","","");
+        BatalTransaksi();
     }//GEN-LAST:event_DashboardMUserTambahButton4MouseClicked
 
     private void DashboardMUserTambahButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton4MouseEntered
@@ -6961,27 +7215,36 @@ public class DashboardFrame extends javax.swing.JFrame {
         int subtoalll = Integer.parseInt(jTextField1.getText());
         int diskonnn = Integer.parseInt(jTextField2.getText());
         int grandtoalll = Integer.parseInt(jTextField3.getText());
-        if (bayarrr >= grandtoalll) {
-            System.out.println("uangnya cuku gan");
-            SewaProcessAwal.setVisible(false);
-            SewaProcessKedua.setVisible(false);
-            SewaProcessAkhir.setVisible(true);
-            int kembalians = bayarrr - grandtoalll;
-            TBFTransaksiId10.setText("Kembalian: Rp "+kembalians);
-            try {
-                DateFormat fmt2 = new SimpleDateFormat("yyyy-MM-dd");
-                String tmp_dte2 = fmt2.format(this.jDateChooser1.getDate());
-                System.out.println(tmp_dte2);
-                TBFTransaksiId16.setText("Tanggal Pengembalian: "+tmp_dte2);
-                int hasil = MySQL.MySQLUpdate("UPDATE transaksi SET ts_tgl_pengembalian='"+tmp_dte2+"', ts_diskon='"+diskonnn+"',ts_subtotal='"+subtoalll+"', ts_bayar='"+bayarrr+"', status_pending='0' where ts_id='"+baruTransaksi+"'");
-                LoadTableData("Sewa","","");
-            } catch (SQLException ex) {
-                Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+        if (jDateChooser1.getDate() != null) {
+            if (bayarrr >= grandtoalll) {
+                System.out.println("uangnya cuku gan");
+                SewaProcessAwal.setVisible(false);
+                SewaProcessKedua.setVisible(false);
+                SewaProcessAkhir.setVisible(true);
+                int kembalians = bayarrr - grandtoalll;
+                TBFTransaksiId10.setText("Kembalian: Rp "+kembalians);
+                try {
+                    DateFormat fmt2 = new SimpleDateFormat("yyyy-MM-dd");
+                    String tmp_dte2 = fmt2.format(this.jDateChooser1.getDate());
+                    System.out.println(tmp_dte2);
+                    TBFTransaksiId12.setText("Sub Total: "+jTextField1.getText());
+                    TBFTransaksiId11.setText("Discount: 0%");
+                    TBFTransaksiId13.setText("Grand Total: "+jTextField3.getText());
+                    TBFTransaksiId14.setText("Bayar: "+jTextField4.getText());
+                    TBFTransaksiId16.setText("Tanggal Pengembalian: "+tmp_dte2);
+                    int hasil = MySQL.MySQLUpdate("UPDATE transaksi SET ts_tgl_pengembalian='"+tmp_dte2+"', ts_diskon='"+diskonnn+"',ts_subtotal='"+subtoalll+"', ts_bayar='"+bayarrr+"', status_pending='0' where ts_id='"+baruTransaksi+"'");
+                    LoadTableData("Sewa","","");
+                } catch (SQLException ex) {
+                    Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            } else {
+                System.out.println("uangnya kurang gan");
+                Master.showTholutDialogOk("Informasi", "Maaf uangnya kurang", "Information");
             }
-            
         } else {
-            System.out.println("uangnya kurang gan");
-            Master.showTholutDialogOk("Informasi", "Maaf uangnya kurang", "Information");
+            System.out.println("tanggalnya di isi");
+            Master.showTholutDialogOk("Informasi", "Tanggal pengembalian kosong", "Information");
         }
     }//GEN-LAST:event_DashboardMUserTambahButton9MouseClicked
 
@@ -6995,6 +7258,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void DashboardMUserTambahButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton11MouseClicked
         // TODO add your handling code here:
+        BatalTransaksi();
     }//GEN-LAST:event_DashboardMUserTambahButton11MouseClicked
 
     private void DashboardMUserTambahButton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton11MouseEntered
@@ -7021,9 +7285,10 @@ public class DashboardFrame extends javax.swing.JFrame {
     private void DashboardMUserTambahButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton13MouseClicked
         // TODO add your handling code here:
         TransaksiBaruFrame.setVisible(false);
-        SewaProcessAwal.setVisible(false);
-        SewaProcessKedua.setVisible(true);
+        SewaProcessAwal.setVisible(true);
+        SewaProcessKedua.setVisible(false);
         SewaProcessAkhir.setVisible(false);
+        TransaksiInputReset();
     }//GEN-LAST:event_DashboardMUserTambahButton13MouseClicked
 
     private void DashboardMUserTambahButton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton13MouseEntered
@@ -7044,6 +7309,12 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void DashboardMUserTambahButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton10MouseClicked
         // TODO add your handling code here:
+        TransaksiBaruFrame.setVisible(true);
+        SewaProcessAwal.setVisible(true);
+        SewaProcessKedua.setVisible(false);
+        SewaProcessAkhir.setVisible(false);
+        TransaksiInputReset();
+        TransaksiBaruKuy();
     }//GEN-LAST:event_DashboardMUserTambahButton10MouseClicked
 
     private void DashboardMUserTambahButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton14MouseClicked
@@ -7057,6 +7328,73 @@ public class DashboardFrame extends javax.swing.JFrame {
     private void DashboardMUserTambahButton14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton14MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_DashboardMUserTambahButton14MouseExited
+    
+    private void jDateChooser2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooser2PropertyChange
+        // TODO add your handling code here:
+        LaporanAinx();
+    }//GEN-LAST:event_jDateChooser2PropertyChange
+
+    private void jDateChooser3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooser3PropertyChange
+        // TODO add your handling code here:
+        LaporanAinx();
+    }//GEN-LAST:event_jDateChooser3PropertyChange
+
+    private void DashboardMUserTambahButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DashboardMUserTambahButton12MouseClicked
+
+    private void DashboardMUserTambahButton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton12MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DashboardMUserTambahButton12MouseEntered
+
+    private void DashboardMUserTambahButton12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton12MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DashboardMUserTambahButton12MouseExited
+
+    private void PengaturanButtonBatal7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PengaturanButtonBatal7MouseClicked
+
+    private void PengaturanButtonBatal7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal7MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PengaturanButtonBatal7MouseEntered
+
+    private void PengaturanButtonBatal7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal7MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PengaturanButtonBatal7MouseExited
+
+    private void PengaturanButtonBatal8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal8MouseClicked
+        // TODO add your handling code here:
+        System.out.println("kaset kembali");
+        if ("Mengembalikan".equals(PengaturanButtonBatal8.getText())) {
+            PengaturanButtonBatal8.setText("Sudah Kembali");
+            int hasil;
+            try {
+                hasil = MySQL.MySQLUpdate("UPDATE transaksi SET ts_status_kembali = '1' WHERE ts_id = '"+BukaTransaksiIdWhat+"' ");
+            
+                if (hasil == 1) {
+                    System.out.println("data ter update");
+                    Master.showTholutDialogOk("Success", "Berhasil Mengembalikan Peminjaman", "Success");
+                    LoadTableData("Kaset","","");
+                    UbahTambahKasetDialog.setVisible(false);
+                } else {
+                    System.out.println("data gagal di update");
+                    Master.showTholutDialogOk("Failed", "Pengembalian Gagal", "Failed");
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            LoadTableData("Sewa","","");
+        }
+    }//GEN-LAST:event_PengaturanButtonBatal8MouseClicked
+
+    private void PengaturanButtonBatal8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal8MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PengaturanButtonBatal8MouseEntered
+
+    private void PengaturanButtonBatal8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal8MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PengaturanButtonBatal8MouseExited
 
     /**
      * @param args the command line arguments
@@ -7102,6 +7440,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel DashboardContentBerandaTitle;
     private javax.swing.JPanel DashboardContentLaporan;
     private javax.swing.JLabel DashboardContentLaporanTitle;
+    private javax.swing.JLabel DashboardContentLaporanTitle1;
     private javax.swing.JPanel DashboardContentMKaset;
     private javax.swing.JLabel DashboardContentMKasetTitle;
     private javax.swing.JPanel DashboardContentMUser;
@@ -7124,6 +7463,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel DashboardMKasetButton;
     private javax.swing.JLabel DashboardMKasetCariButton;
     private javax.swing.JLabel DashboardMKasetCariButton1;
+    private javax.swing.JLabel DashboardMKasetCariButton3;
     private javax.swing.JTextField DashboardMKasetCariInput;
     private javax.swing.JTextField DashboardMKasetCariInput1;
     private javax.swing.JPanel DashboardMKasetCariInputLine;
@@ -7134,6 +7474,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> DashboardMKasetJenis1;
     private javax.swing.JScrollPane DashboardMKasetScrollPanel;
     private javax.swing.JScrollPane DashboardMKasetScrollPanel1;
+    private javax.swing.JScrollPane DashboardMKasetScrollPanel2;
     private javax.swing.JLabel DashboardMKasetSegarkanButton;
     private javax.swing.JLabel DashboardMKasetSegarkanButton1;
     private javax.swing.JTable DashboardMKasetTable;
@@ -7158,6 +7499,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel DashboardMUserTambahButton1;
     private javax.swing.JLabel DashboardMUserTambahButton10;
     private javax.swing.JLabel DashboardMUserTambahButton11;
+    private javax.swing.JLabel DashboardMUserTambahButton12;
     private javax.swing.JLabel DashboardMUserTambahButton13;
     private javax.swing.JLabel DashboardMUserTambahButton14;
     private javax.swing.JLabel DashboardMUserTambahButton2;
@@ -7174,6 +7516,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel DashboardPengaturanButton;
     private javax.swing.JLabel DashboardSewaButton;
     private javax.swing.JTable DashboardSewaTable;
+    private javax.swing.JTable DashboardSewaTable1;
     private javax.swing.JLabel DashboardTitle;
     private javax.swing.JPanel DeleteDialogHeader;
     private javax.swing.JPanel DeleteDialogMainPanel;
@@ -7196,6 +7539,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel PengaturanButtonBatal4;
     private javax.swing.JLabel PengaturanButtonBatal5;
     private javax.swing.JLabel PengaturanButtonBatal6;
+    private javax.swing.JLabel PengaturanButtonBatal7;
+    private javax.swing.JLabel PengaturanButtonBatal8;
     private javax.swing.JLabel PengaturanButtonClose;
     private javax.swing.JLabel PengaturanButtonSimpan;
     private javax.swing.JTextField PengaturanEmailInput;
@@ -7362,6 +7707,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox horror_c;
     private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;

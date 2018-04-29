@@ -240,7 +240,73 @@ public class MySQL {
              returnData[x][6] = MySQLResultSet.getString("ts_bayar");
              returnData[x][7] = MySQLResultSet.getString("ts_tgl_peminjaman");
              returnData[x][8] = MySQLResultSet.getString("ts_tgl_pengembalian");
-             returnData[x][8] = MySQLResultSet.getString("status_pending");
+             returnData[x][9] = MySQLResultSet.getString("status_pending");
+             x++;
+        }
+        System.out.println("[Lib][MySQL] "+total+" Data Kaset Success Loaded");
+        
+        return returnData;
+    }
+    
+    // Method called for get Database Kaset
+    public String[][] MySQLGetLaporan(String DariTanggal, String SampaiTanggal) throws SQLException {
+        Connection Conn = (Connection) MySQL.MySQLConnection();
+        //yyyy-MM-dd
+        String dariHari = DariTanggal.substring(8);
+        
+        if ("0".equals(dariHari.substring(0,1))) {
+            dariHari = dariHari.substring(1,2);
+        }
+        
+        String dariBulan = DariTanggal.substring(5,7);
+        
+        if ("0".equals(dariBulan.substring(0,1))) {
+            dariBulan = dariBulan.substring(1,2);
+        }
+        
+        String dariTahun = DariTanggal.substring(0,4);
+        
+        String sampaiHari = SampaiTanggal.substring(8);
+        
+        if ("0".equals(sampaiHari.substring(0,1))) {
+            sampaiHari = sampaiHari.substring(1,2);
+        }
+        
+        String sampaiBulan = SampaiTanggal.substring(5,7);
+        
+        if ("0".equals(sampaiBulan.substring(0,1))) {
+            sampaiBulan = sampaiBulan.substring(1,2);
+        }
+        
+        String sampaiTahun = SampaiTanggal.substring(0,4);
+        System.out.println("dari Hari:"+dariHari+", Bulan:"+dariBulan+", Tahun:"+dariTahun);
+        System.out.println("sampai Hari:"+sampaiHari+", Bulan:"+sampaiBulan+", Tahun:"+sampaiTahun);
+        
+        String query = "select * from transaksi where year(ts_tgl_peminjaman) >= '"+dariTahun+"' and year(ts_tgl_peminjaman) <= '"+sampaiTahun+"' and month(ts_tgl_peminjaman) >= '"+dariBulan+"' and month(ts_tgl_peminjaman) <= '"+sampaiBulan+"' and day(ts_tgl_peminjaman) >= '"+dariHari+"' and day(ts_tgl_peminjaman) <= '"+sampaiHari+"' and status_pending = '0'";
+        
+        // Counting Data
+        System.out.println("[Lib][MySQL] Running: ["+query+"]");
+        MySQLResultSet = MySQLStatement.executeQuery(query);
+        MySQLResultSet.last(); 
+        int total = MySQLResultSet.getRow();
+        String returnData[][] = new String[total][10];
+        System.out.println("[Lib][MySQL] Total Data ["+total+"]");
+        
+        // Inserting Data to Array
+        System.out.println("[Lib][MySQL] Running: ["+query+"]");
+        MySQLResultSet = MySQLStatement.executeQuery(query);
+        int x = 0;
+        while (MySQLResultSet.next()) {
+             returnData[x][0] = MySQLResultSet.getString("ts_id");
+             returnData[x][1] = MySQLResultSet.getString("pelanggan_id");
+             returnData[x][2] = MySQLResultSet.getString("karyawan_id");
+             returnData[x][3] = MySQLResultSet.getString("ts_status_kembali");
+             returnData[x][4] = MySQLResultSet.getString("ts_subtotal");
+             returnData[x][5] = MySQLResultSet.getString("ts_diskon");
+             returnData[x][6] = MySQLResultSet.getString("ts_bayar");
+             returnData[x][7] = MySQLResultSet.getString("ts_tgl_peminjaman");
+             returnData[x][8] = MySQLResultSet.getString("ts_tgl_pengembalian");
+             returnData[x][9] = MySQLResultSet.getString("status_pending");
              x++;
         }
         System.out.println("[Lib][MySQL] "+total+" Data Kaset Success Loaded");
