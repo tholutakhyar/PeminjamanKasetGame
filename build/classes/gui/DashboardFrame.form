@@ -6679,7 +6679,14 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="DashboardContentLaporanTitle2" min="-2" pref="242" max="-2" attributes="0"/>
+                                  <EmptySpace pref="86" max="32767" attributes="0"/>
+                                  <Component id="DashboardContentLaporanTitle3" min="-2" pref="246" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                                  <Component id="DashboardContentLaporanTitle4" min="-2" pref="277" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
                                   <Component id="DashboardContentLaporanTitle" min="-2" pref="187" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jDateChooser2" min="-2" pref="237" max="-2" attributes="0"/>
@@ -6687,10 +6694,12 @@
                                   <Component id="DashboardContentLaporanTitle1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jDateChooser3" min="-2" pref="237" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="DashboardMKasetCariButton3" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="DashboardMKasetCariButton3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="231" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -6705,21 +6714,28 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="DashboardContentLaporanTitle" pref="40" max="32767" attributes="0"/>
-                              <Component id="jDateChooser2" max="32767" attributes="0"/>
-                              <Component id="DashboardContentLaporanTitle1" max="32767" attributes="0"/>
-                              <Component id="jDateChooser3" alignment="1" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="DashboardContentLaporanTitle" pref="40" max="32767" attributes="0"/>
+                                  <Component id="jDateChooser2" max="32767" attributes="0"/>
+                                  <Component id="DashboardContentLaporanTitle1" max="32767" attributes="0"/>
+                                  <Component id="jDateChooser3" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="DashboardMKasetCariButton3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="352" max="32767" attributes="0"/>
-                          <Component id="DashboardMKasetCariButton3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace pref="370" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="DashboardContentLaporanTitle2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DashboardContentLaporanTitle3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DashboardContentLaporanTitle4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                              <Component id="DashboardMKasetScrollPanel2" min="-2" pref="325" max="-2" attributes="0"/>
-                              <EmptySpace pref="66" max="32767" attributes="0"/>
+                              <Component id="DashboardMKasetScrollPanel2" min="-2" pref="342" max="-2" attributes="0"/>
+                              <EmptySpace pref="49" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -6825,6 +6841,44 @@
                       <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DashboardMKasetCariButton3MouseClicked"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="DashboardContentLaporanTitle2">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="18" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Total Penyewa: 0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="DashboardContentLaporanTitle3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="18" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="Total Kaset Keluar: 0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="DashboardContentLaporanTitle4">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="18" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="4"/>
+                    <Property name="text" type="java.lang.String" value="Total Pendapatan: 0"/>
                   </Properties>
                 </Component>
               </SubComponents>

@@ -18,6 +18,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 
+import java.util.HashMap;
+import java.util.Map;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRTableModelDataSource;
+import net.sf.jasperreports.view.JasperViewer;
+
 /**
  *
  * @author TholutAkhyar
@@ -421,6 +430,9 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetScrollPanel2 = new javax.swing.JScrollPane();
         DashboardSewaTable1 = new javax.swing.JTable();
         DashboardMKasetCariButton3 = new javax.swing.JLabel();
+        DashboardContentLaporanTitle2 = new javax.swing.JLabel();
+        DashboardContentLaporanTitle3 = new javax.swing.JLabel();
+        DashboardContentLaporanTitle4 = new javax.swing.JLabel();
 
         DeleteDialogYesNo.setUndecorated(true);
         DeleteDialogYesNo.setSize(new java.awt.Dimension(400, 300));
@@ -4804,6 +4816,25 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetCariButton3.setText("Cetak");
         DashboardMKasetCariButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetCariButton3.setOpaque(true);
+        DashboardMKasetCariButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DashboardMKasetCariButton3MouseClicked(evt);
+            }
+        });
+
+        DashboardContentLaporanTitle2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentLaporanTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentLaporanTitle2.setText("Total Penyewa: 0");
+
+        DashboardContentLaporanTitle3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentLaporanTitle3.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentLaporanTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardContentLaporanTitle3.setText("Total Kaset Keluar: 0");
+
+        DashboardContentLaporanTitle4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentLaporanTitle4.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentLaporanTitle4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        DashboardContentLaporanTitle4.setText("Total Pendapatan: 0");
 
         javax.swing.GroupLayout DashboardContentLaporanLayout = new javax.swing.GroupLayout(DashboardContentLaporan);
         DashboardContentLaporan.setLayout(DashboardContentLaporanLayout);
@@ -4813,15 +4844,23 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
+                        .addComponent(DashboardContentLaporanTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                        .addComponent(DashboardContentLaporanTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109)
+                        .addComponent(DashboardContentLaporanTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                         .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(DashboardContentLaporanTitle1)
                         .addGap(18, 18, 18)
-                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(231, Short.MAX_VALUE))
+                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                     .addContainerGap()
@@ -4832,19 +4871,24 @@ public class DashboardFrame extends javax.swing.JFrame {
             DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DashboardContentLaporanTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 352, Short.MAX_VALUE)
-                .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DashboardContentLaporanTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jDateChooser3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 370, Short.MAX_VALUE)
+                .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DashboardContentLaporanTitle2)
+                    .addComponent(DashboardContentLaporanTitle3)
+                    .addComponent(DashboardContentLaporanTitle4))
                 .addContainerGap())
             .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                     .addGap(63, 63, 63)
-                    .addComponent(DashboardMKasetScrollPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(66, Short.MAX_VALUE)))
+                    .addComponent(DashboardMKasetScrollPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(49, Short.MAX_VALUE)))
         );
 
         DashboardContent.add(DashboardContentLaporan, "card5");
@@ -5337,6 +5381,34 @@ public class DashboardFrame extends javax.swing.JFrame {
                 Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
 
+        }
+    }
+    
+    private void CetakNota() {
+    
+    }
+    
+    private void CetakLaporan() {
+        try {
+            DefaultTableModel de = (DefaultTableModel) DashboardSewaTable1.getModel();
+            JRTableModelDataSource datasource = new JRTableModelDataSource(de);
+            String reportSource = "./laporan.jrxml";
+            
+            DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+            String dari = fmt.format(this.jDateChooser2.getDate());
+            DateFormat fmt2 = new SimpleDateFormat("yyyy-MM-dd");
+            String sampai = fmt2.format(this.jDateChooser3.getDate());
+
+            JasperReport jr = JasperCompileManager.compileReport(reportSource);
+
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("Laporan_Dari", dari);
+            params.put("Laporan_Sampai", sampai);
+            JasperPrint jp = JasperFillManager.fillReport(jr, params, datasource);
+
+            JasperViewer.viewReport(jp, false);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     
@@ -7319,6 +7391,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void DashboardMUserTambahButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton14MouseClicked
         // TODO add your handling code here:
+        CetakNota();
     }//GEN-LAST:event_DashboardMUserTambahButton14MouseClicked
 
     private void DashboardMUserTambahButton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMUserTambahButton14MouseEntered
@@ -7353,6 +7426,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void PengaturanButtonBatal7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal7MouseClicked
         // TODO add your handling code here:
+        CetakNota();
     }//GEN-LAST:event_PengaturanButtonBatal7MouseClicked
 
     private void PengaturanButtonBatal7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal7MouseEntered
@@ -7395,6 +7469,11 @@ public class DashboardFrame extends javax.swing.JFrame {
     private void PengaturanButtonBatal8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanButtonBatal8MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_PengaturanButtonBatal8MouseExited
+
+    private void DashboardMKasetCariButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetCariButton3MouseClicked
+        // TODO add your handling code here:
+        CetakLaporan();
+    }//GEN-LAST:event_DashboardMKasetCariButton3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -7441,6 +7520,9 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel DashboardContentLaporan;
     private javax.swing.JLabel DashboardContentLaporanTitle;
     private javax.swing.JLabel DashboardContentLaporanTitle1;
+    private javax.swing.JLabel DashboardContentLaporanTitle2;
+    private javax.swing.JLabel DashboardContentLaporanTitle3;
+    private javax.swing.JLabel DashboardContentLaporanTitle4;
     private javax.swing.JPanel DashboardContentMKaset;
     private javax.swing.JLabel DashboardContentMKasetTitle;
     private javax.swing.JPanel DashboardContentMUser;
