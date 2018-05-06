@@ -203,6 +203,9 @@ public class MySQL {
             case "ID":
                 TypeWhat = "ts_id";
                 break;
+            case "Transaksi Id":
+                TypeWhat = "mantapkuy";
+                break;
             case "SewaDetil":
                 TypeWhat = "SewaDetil";
                 break;
@@ -216,6 +219,10 @@ public class MySQL {
         
         if ("SewaDetil".equals(TypeWhat)) {
             query = "select * from transaksi where ts_id = '"+FindWhat+"' and status_pending = '0'";
+        }
+        
+        if ("mantapkuy".equals(TypeWhat)) {
+            query = "select * from transaksi where ts_id like '%"+FindWhat+"%' and status_pending = '0'";
         }
         
         // Counting Data
