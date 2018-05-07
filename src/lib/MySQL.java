@@ -215,14 +215,14 @@ public class MySQL {
         }
             
         String[] d_as = {FindWhat, TypeWhat};
-        String query = "select * from transaksi where status_pending = '0'";
+        String query = "select * from transaksi where status_pending = '0' order by ts_status_kembali asc";
         
         if ("SewaDetil".equals(TypeWhat)) {
-            query = "select * from transaksi where ts_id = '"+FindWhat+"' and status_pending = '0'";
+            query = "select * from transaksi where ts_id = '"+FindWhat+"' and status_pending = '0' order by ts_status_kembali asc";
         }
         
         if ("mantapkuy".equals(TypeWhat)) {
-            query = "select * from transaksi where ts_id like '%"+FindWhat+"%' and status_pending = '0'";
+            query = "select * from transaksi where ts_id like '%"+FindWhat+"%' and status_pending = '0' order by ts_status_kembali asc";
         }
         
         // Counting Data

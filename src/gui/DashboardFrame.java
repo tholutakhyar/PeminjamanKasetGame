@@ -427,6 +427,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         PengaturanButtonBatal3 = new javax.swing.JLabel();
         DashboardMUserScrollPanel1 = new javax.swing.JScrollPane();
         TCUserTable = new javax.swing.JTable();
+        TBFTransaksiId35 = new javax.swing.JLabel();
         TransaksiCariKasetFrame = new javax.swing.JFrame();
         jPanel7 = new javax.swing.JPanel();
         PengaturanYesNoHeader10 = new javax.swing.JPanel();
@@ -440,6 +441,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         PengaturanButtonBatal6 = new javax.swing.JLabel();
         DashboardMUserScrollPanel2 = new javax.swing.JScrollPane();
         TCUserTable1 = new javax.swing.JTable();
+        TBFTransaksiId36 = new javax.swing.JLabel();
         TransaksiYesNo = new javax.swing.JFrame();
         PengaturanYesNoMainPanel1 = new javax.swing.JPanel();
         PengaturanYesNoHeader1 = new javax.swing.JPanel();
@@ -507,7 +509,6 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetJenis1 = new javax.swing.JComboBox<>();
         DashboardMKasetTambahButton1 = new javax.swing.JLabel();
         DashboardMKasetUbahButton1 = new javax.swing.JLabel();
-        DashboardMKasetHapusButton1 = new javax.swing.JLabel();
         DashboardMKasetSegarkanButton1 = new javax.swing.JLabel();
         DashboardContentLaporan = new javax.swing.JPanel();
         DashboardContentLaporanTitle = new javax.swing.JLabel();
@@ -525,6 +526,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DeleteDialogYesNo.setSize(new java.awt.Dimension(400, 300));
 
         DeleteDialogMainPanel.setBackground(new java.awt.Color(35, 39, 42));
+        DeleteDialogMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         DeleteDialogHeader.setBackground(new java.awt.Color(32, 34, 37));
 
@@ -667,7 +669,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addGroup(DeleteDialogMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(DialogDeleteTidakButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(DialogDeleteYaButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout DeleteDialogYesNoLayout = new javax.swing.GroupLayout(DeleteDialogYesNo.getContentPane());
@@ -685,6 +687,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         UbahTambahUserDialog.setSize(new java.awt.Dimension(740, 520));
 
         UTUserMainPanel.setBackground(new java.awt.Color(44, 47, 51));
+        UTUserMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         UTUserMainPanel.setPreferredSize(new java.awt.Dimension(740, 520));
 
         UTUserHeaderPanel.setBackground(new java.awt.Color(32, 34, 37));
@@ -728,7 +731,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UTUserHeaderPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(UTUserHeaderTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 510, Short.MAX_VALUE)
+                .addGap(0, 506, Short.MAX_VALUE)
                 .addComponent(UTUserButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         UTUserHeaderPanelLayout.setVerticalGroup(
@@ -1152,7 +1155,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addGroup(UTUserMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(UTUserButtonTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(UTUserButtonBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout UbahTambahUserDialogLayout = new javax.swing.GroupLayout(UbahTambahUserDialog.getContentPane());
@@ -1170,6 +1173,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         UbahTambahDialogYesNo.setSize(new java.awt.Dimension(400, 300));
 
         UbahTambahDialogMainPanel.setBackground(new java.awt.Color(35, 39, 42));
+        UbahTambahDialogMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         UbahTambahDialogHeader.setBackground(new java.awt.Color(32, 34, 37));
 
@@ -1312,7 +1316,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addGroup(UbahTambahDialogMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(UbahTambahDialogTidakButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(UbahTambahDialogYaButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout UbahTambahDialogYesNoLayout = new javax.swing.GroupLayout(UbahTambahDialogYesNo.getContentPane());
@@ -1330,6 +1334,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         UbahTambahKasetDialog.setSize(new java.awt.Dimension(760, 420));
 
         UTKasetMainPanel.setBackground(new java.awt.Color(44, 47, 51));
+        UTKasetMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         UTKasetHeaderPanel.setBackground(new java.awt.Color(32, 34, 37));
         UTKasetHeaderPanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1372,7 +1377,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UTKasetHeaderPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(UTKasetHeaderTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 530, Short.MAX_VALUE)
+                .addGap(0, 526, Short.MAX_VALUE)
                 .addComponent(UTKasetButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         UTKasetHeaderPanelLayout.setVerticalGroup(
@@ -1709,7 +1714,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(UTKasetHargaInput)
                         .addComponent(UTKasetHargaInputLine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(UTKasetStokInputLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         UTKasetMainPanelLayout.setVerticalGroup(
             UTKasetMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1771,7 +1776,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                                 .addComponent(puzzle_c, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(rpg_c, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(UTKasetMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UTKasetButtonBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UTKasetButtonTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1793,6 +1798,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         PengaturanFrame.setSize(new java.awt.Dimension(720, 400));
 
         PengaturanMainPanel.setBackground(new java.awt.Color(44, 47, 51));
+        PengaturanMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         PengaturanHeader.setBackground(new java.awt.Color(32, 34, 37));
         PengaturanHeader.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1835,7 +1841,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PengaturanHeaderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PengaturanHeaderTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 490, Short.MAX_VALUE)
+                .addGap(0, 486, Short.MAX_VALUE)
                 .addComponent(PengaturanButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         PengaturanHeaderLayout.setVerticalGroup(
@@ -2247,6 +2253,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         PengaturanYesNo.setSize(new java.awt.Dimension(400, 140));
 
         PengaturanYesNoMainPanel.setBackground(new java.awt.Color(35, 39, 42));
+        PengaturanYesNoMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         PengaturanYesNoHeader.setBackground(new java.awt.Color(32, 34, 37));
 
@@ -2392,10 +2399,10 @@ public class DashboardFrame extends javax.swing.JFrame {
         );
 
         TransaksiBukaFrame.setUndecorated(true);
-        TransaksiBukaFrame.setPreferredSize(new java.awt.Dimension(750, 500));
         TransaksiBukaFrame.setSize(new java.awt.Dimension(750, 500));
 
         jPanel1.setBackground(new java.awt.Color(35, 39, 42));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         jPanel1.setPreferredSize(new java.awt.Dimension(750, 500));
 
         TBFTransaksiId.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -2724,13 +2731,13 @@ public class DashboardFrame extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(PengaturanButtonBatal7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(DashboardDetilSewaScrollPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 707, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(PengaturanYesNoHeader7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(TBFTransaksiId)
@@ -2803,13 +2810,14 @@ public class DashboardFrame extends javax.swing.JFrame {
         );
         TransaksiBukaFrameLayout.setVerticalGroup(
             TransaksiBukaFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
         );
 
         TransaksiBaruFrame.setUndecorated(true);
         TransaksiBaruFrame.setSize(new java.awt.Dimension(828, 500));
 
         jPanel2.setBackground(new java.awt.Color(35, 39, 42));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         PengaturanYesNoHeader8.setBackground(new java.awt.Color(32, 34, 37));
         PengaturanYesNoHeader8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -2907,6 +2915,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton1.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/calculator_24.png"))); // NOI18N
         DashboardMUserTambahButton1.setText("Hitung");
         DashboardMUserTambahButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton1.setOpaque(true);
@@ -2945,6 +2954,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton3.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/delete_24.png"))); // NOI18N
         DashboardMUserTambahButton3.setText("Hapus");
         DashboardMUserTambahButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton3.setOpaque(true);
@@ -3051,10 +3061,10 @@ public class DashboardFrame extends javax.swing.JFrame {
                     .addComponent(TBFUserId2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(TBFTglPeminjaman2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TBFNama4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DashboardMUserTambahButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DashboardMUserTambahButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DashboardMUserTambahButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DashboardMUserTambahButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -3123,18 +3133,15 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TBFNama2)
+                    .addComponent(TBFTglPeminjaman1)
+                    .addComponent(TBFTglPengembalian1)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TBFTransaksiId1)
                             .addComponent(TBFUserId1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addComponent(DashboardMUserTambahButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TBFNama2)
-                            .addComponent(TBFTglPeminjaman1)
-                            .addComponent(TBFTglPengembalian1))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DashboardMUserTambahButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -3164,19 +3171,20 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(SewaProcessAwalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SewaProcessAwalLayout.createSequentialGroup()
-                        .addComponent(DashboardMUserTambahButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(DashboardMUserTambahButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SewaProcessAwalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TBFTransaksiId2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)
+                        .addGroup(SewaProcessAwalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TBFTransaksiId2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(SewaProcessAwalLayout.createSequentialGroup()
+                        .addComponent(DashboardMUserTambahButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMUserTambahButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMUserTambahButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 114, Short.MAX_VALUE))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DashboardMUserTambahButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 114, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(SewaProcessAwalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(SewaProcessAwalLayout.createSequentialGroup()
@@ -3249,6 +3257,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton8.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/kembali_24.png"))); // NOI18N
         DashboardMUserTambahButton8.setText("Kembali");
         DashboardMUserTambahButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton8.setOpaque(true);
@@ -3268,7 +3277,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton9.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DashboardMUserTambahButton9.setText("Lanjut");
+        DashboardMUserTambahButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/calculator_24.png"))); // NOI18N
+        DashboardMUserTambahButton9.setText("Hitung");
         DashboardMUserTambahButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton9.setOpaque(true);
         DashboardMUserTambahButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3350,7 +3360,9 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFTransaksiId9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         TBFTransaksiId9.setText("Tanggal Pengembalian ");
 
+        jDateChooser1.setDateFormatString("yyyy - MM - d");
         jDateChooser1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jDateChooser1.setMinSelectableDate(new java.util.Date(-62125369200000L));
 
         TBFTransaksiId32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         TBFTransaksiId32.setForeground(new java.awt.Color(255, 255, 255));
@@ -3376,13 +3388,15 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SewaProcessKeduaLayout.createSequentialGroup()
                         .addComponent(DashboardMUserTambahButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(DashboardMUserTambahButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TBFTransaksiId3, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
                             .addGroup(SewaProcessKeduaLayout.createSequentialGroup()
+                                .addGap(180, 180, 180)
+                                .addComponent(TBFTransaksiId3, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE))
+                            .addGroup(SewaProcessKeduaLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(DashboardMUserTambahButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(DashboardMUserTambahButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SewaProcessKeduaLayout.createSequentialGroup()
                         .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -3851,6 +3865,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         TransaksiCariUserFrame.setType(java.awt.Window.Type.POPUP);
 
         jPanel6.setBackground(new java.awt.Color(44, 47, 51));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         PengaturanYesNoHeader9.setBackground(new java.awt.Color(32, 34, 37));
         PengaturanYesNoHeader9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -3893,7 +3908,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PengaturanYesNoHeader9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PengaturanYesNo_Title9, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                 .addComponent(PengaturanYesNo_Close9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         PengaturanYesNoHeader9Layout.setVerticalGroup(
@@ -4031,6 +4046,11 @@ public class DashboardFrame extends javax.swing.JFrame {
         TCUserTable.setSelectionBackground(new java.awt.Color(114, 137, 218));
         DashboardMUserScrollPanel1.setViewportView(TCUserTable);
 
+        TBFTransaksiId35.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId35.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId35.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId35.setText("List User :");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -4054,8 +4074,12 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DashboardMUserScrollPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
+                .addComponent(DashboardMUserScrollPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TBFTransaksiId35)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4068,10 +4092,12 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(PengaturanUsernameInput1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(PengaturanUsernameInputLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(PengaturanButtonBatal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(PengaturanButtonBatal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                     .addComponent(DashboardMUserJenis1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(14, 14, 14)
-                .addComponent(DashboardMUserScrollPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TBFTransaksiId35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardMUserScrollPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PengaturanButtonBatal2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
@@ -4094,6 +4120,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         TransaksiCariKasetFrame.setSize(new java.awt.Dimension(400, 475));
 
         jPanel7.setBackground(new java.awt.Color(44, 47, 51));
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         PengaturanYesNoHeader10.setBackground(new java.awt.Color(32, 34, 37));
         PengaturanYesNoHeader10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -4136,7 +4163,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PengaturanYesNoHeader10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PengaturanYesNo_Title10, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addComponent(PengaturanYesNo_Close10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         PengaturanYesNoHeader10Layout.setVerticalGroup(
@@ -4274,6 +4301,11 @@ public class DashboardFrame extends javax.swing.JFrame {
         TCUserTable1.setSelectionBackground(new java.awt.Color(114, 137, 218));
         DashboardMUserScrollPanel2.setViewportView(TCUserTable1);
 
+        TBFTransaksiId36.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId36.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId36.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId36.setText("List Kaset :");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -4297,8 +4329,12 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DashboardMUserScrollPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addComponent(DashboardMUserScrollPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TBFTransaksiId36)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4313,8 +4349,10 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(PengaturanUsernameInputLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(PengaturanButtonBatal4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(DashboardMUserJenis2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(14, 14, 14)
-                .addComponent(DashboardMUserScrollPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TBFTransaksiId36)
+                .addGap(12, 12, 12)
+                .addComponent(DashboardMUserScrollPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PengaturanButtonBatal5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
@@ -4338,6 +4376,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         TransaksiYesNo.setType(java.awt.Window.Type.POPUP);
 
         PengaturanYesNoMainPanel1.setBackground(new java.awt.Color(35, 39, 42));
+        PengaturanYesNoMainPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         PengaturanYesNoHeader1.setBackground(new java.awt.Color(32, 34, 37));
 
@@ -4571,6 +4610,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1000, 600));
 
         DashboardMainPanel.setBackground(new java.awt.Color(35, 39, 42));
+        DashboardMainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
 
         DashboardHeader.setBackground(new java.awt.Color(44, 47, 51));
 
@@ -4631,6 +4671,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardKeluarButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardKeluarButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardKeluarButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardKeluarButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/logout_12.png"))); // NOI18N
         DashboardKeluarButton.setText("Keluar");
         DashboardKeluarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardKeluarButton.setOpaque(true);
@@ -4650,6 +4691,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardPengaturanButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardPengaturanButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardPengaturanButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardPengaturanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/settings_12.png"))); // NOI18N
         DashboardPengaturanButton.setText("Pengaturan");
         DashboardPengaturanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardPengaturanButton.setOpaque(true);
@@ -4673,9 +4715,9 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(DashboardTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(DashboardPengaturanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(DashboardKeluarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DashboardPengaturanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(DashboardKeluarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(DashboardMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -4697,6 +4739,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardBerandaButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardBerandaButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardBerandaButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardBerandaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/home_24.png"))); // NOI18N
         DashboardBerandaButton.setText("Beranda");
         DashboardBerandaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardBerandaButton.setOpaque(true);
@@ -4716,6 +4759,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/database_24.png"))); // NOI18N
         DashboardMUserButton.setText("Master User");
         DashboardMUserButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserButton.setOpaque(true);
@@ -4735,6 +4779,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/database_24.png"))); // NOI18N
         DashboardMKasetButton.setText("Master Kaset");
         DashboardMKasetButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetButton.setOpaque(true);
@@ -4754,6 +4799,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardSewaButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardSewaButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardSewaButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardSewaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cart_24.png"))); // NOI18N
         DashboardSewaButton.setText("Sewa Kaset");
         DashboardSewaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardSewaButton.setOpaque(true);
@@ -4773,6 +4819,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardLaporanButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardLaporanButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardLaporanButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardLaporanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/report_24.png"))); // NOI18N
         DashboardLaporanButton.setText("Laporan");
         DashboardLaporanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardLaporanButton.setOpaque(true);
@@ -4790,13 +4837,14 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardLoginUsername.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         DashboardLoginUsername.setForeground(new java.awt.Color(255, 255, 255));
-        DashboardLoginUsername.setText("Account: null (rank)");
+        DashboardLoginUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/user_24.png"))); // NOI18N
+        DashboardLoginUsername.setText("null (rank)");
 
         javax.swing.GroupLayout DashboardHeaderLayout = new javax.swing.GroupLayout(DashboardHeader);
         DashboardHeader.setLayout(DashboardHeaderLayout);
         DashboardHeaderLayout.setHorizontalGroup(
             DashboardHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DashboardHeaderDrag, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(DashboardHeaderDrag, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
             .addGroup(DashboardHeaderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(DashboardHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -4835,6 +4883,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardContentBerandaTitle.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         DashboardContentBerandaTitle.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/home_24.png"))); // NOI18N
         DashboardContentBerandaTitle.setText("Beranda");
 
         DashboardContentBerandaTitle1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -4851,7 +4900,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                     .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
                         .addComponent(DashboardContentBerandaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE))
+                    .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE))
                 .addContainerGap())
         );
         DashboardContentBerandaLayout.setVerticalGroup(
@@ -4861,7 +4910,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addComponent(DashboardContentBerandaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(352, Short.MAX_VALUE))
+                .addContainerGap(349, Short.MAX_VALUE))
         );
 
         DashboardContent.add(DashboardContentBeranda, "card1");
@@ -4870,6 +4919,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardContentMUserTitle.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         DashboardContentMUserTitle.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentMUserTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/database_24.png"))); // NOI18N
         DashboardContentMUserTitle.setText("Data User");
         DashboardContentMUserTitle.setMaximumSize(new java.awt.Dimension(110, 40));
         DashboardContentMUserTitle.setMinimumSize(new java.awt.Dimension(110, 40));
@@ -4879,6 +4929,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserCariButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserCariButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserCariButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserCariButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/search_24.png"))); // NOI18N
         DashboardMUserCariButton.setText("Cari");
         DashboardMUserCariButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserCariButton.setOpaque(true);
@@ -4966,6 +5017,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/plus_24.png"))); // NOI18N
         DashboardMUserTambahButton.setText("Tambah");
         DashboardMUserTambahButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton.setOpaque(true);
@@ -4985,6 +5037,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserUbahButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserUbahButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserUbahButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserUbahButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/edit_24.png"))); // NOI18N
         DashboardMUserUbahButton.setText("Ubah");
         DashboardMUserUbahButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserUbahButton.setOpaque(true);
@@ -5004,6 +5057,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserHapusButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserHapusButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserHapusButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserHapusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/delete_24.png"))); // NOI18N
         DashboardMUserHapusButton.setText("Hapus");
         DashboardMUserHapusButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserHapusButton.setOpaque(true);
@@ -5023,6 +5077,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserSegarkanButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserSegarkanButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserSegarkanButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserSegarkanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/refresh_24.png"))); // NOI18N
         DashboardMUserSegarkanButton.setText("Segarkan");
         DashboardMUserSegarkanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserSegarkanButton.setOpaque(true);
@@ -5052,7 +5107,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(DashboardMUserCariButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(DashboardContentMUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(DashboardMUserCariInput, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
+                            .addComponent(DashboardMUserCariInput, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
                             .addComponent(DashboardMUserCariInputLine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMUserJenis, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5064,7 +5119,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(DashboardMUserHapusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMUserSegarkanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 290, Short.MAX_VALUE)))
+                        .addGap(0, 286, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         DashboardContentMUserLayout.setVerticalGroup(
@@ -5100,6 +5155,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardContentMKasetTitle.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         DashboardContentMKasetTitle.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentMKasetTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/database_24.png"))); // NOI18N
         DashboardContentMKasetTitle.setText("Data Kaset");
         DashboardContentMKasetTitle.setMaximumSize(new java.awt.Dimension(110, 40));
         DashboardContentMKasetTitle.setMinimumSize(new java.awt.Dimension(110, 40));
@@ -5109,6 +5165,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetCariButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetCariButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetCariButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetCariButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/search_24.png"))); // NOI18N
         DashboardMKasetCariButton.setText("Cari");
         DashboardMKasetCariButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetCariButton.setOpaque(true);
@@ -5196,6 +5253,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetTambahButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetTambahButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetTambahButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetTambahButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/plus_24.png"))); // NOI18N
         DashboardMKasetTambahButton.setText("Tambah");
         DashboardMKasetTambahButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetTambahButton.setOpaque(true);
@@ -5215,6 +5273,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetUbahButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetUbahButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetUbahButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetUbahButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/edit_24.png"))); // NOI18N
         DashboardMKasetUbahButton.setText("Ubah");
         DashboardMKasetUbahButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetUbahButton.setOpaque(true);
@@ -5234,6 +5293,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetHapusButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetHapusButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetHapusButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetHapusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/delete_24.png"))); // NOI18N
         DashboardMKasetHapusButton.setText("Hapus");
         DashboardMKasetHapusButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetHapusButton.setOpaque(true);
@@ -5253,6 +5313,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetSegarkanButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetSegarkanButton.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetSegarkanButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetSegarkanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/refresh_24.png"))); // NOI18N
         DashboardMKasetSegarkanButton.setText("Segarkan");
         DashboardMKasetSegarkanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetSegarkanButton.setOpaque(true);
@@ -5280,9 +5341,9 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(DashboardContentMKasetTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMKasetCariButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(DashboardContentMKasetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(DashboardMKasetCariInput, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
+                            .addComponent(DashboardMKasetCariInput, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
                             .addComponent(DashboardMKasetCariInputLine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMKasetJenis, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5294,7 +5355,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(DashboardMKasetHapusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DashboardMKasetSegarkanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 290, Short.MAX_VALUE)))
+                        .addGap(0, 286, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         DashboardContentMKasetLayout.setVerticalGroup(
@@ -5330,6 +5391,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardContentSewaTitle.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         DashboardContentSewaTitle.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentSewaTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cart_24.png"))); // NOI18N
         DashboardContentSewaTitle.setText("Sewa Kaset");
 
         DashboardMKasetScrollPanel1.setBorder(null);
@@ -5369,6 +5431,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetCariButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetCariButton1.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetCariButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetCariButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/search_24.png"))); // NOI18N
         DashboardMKasetCariButton1.setText("Cari");
         DashboardMKasetCariButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetCariButton1.setOpaque(true);
@@ -5414,7 +5477,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         );
         DashboardMKasetCariInputLine1Layout.setVerticalGroup(
             DashboardMKasetCariInputLine1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3, Short.MAX_VALUE)
+            .addGap(0, 4, Short.MAX_VALUE)
         );
 
         DashboardMKasetJenis1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Transaksi Id" }));
@@ -5423,6 +5486,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetTambahButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetTambahButton1.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetTambahButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetTambahButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/plus_24.png"))); // NOI18N
         DashboardMKasetTambahButton1.setText("Transaksi Baru");
         DashboardMKasetTambahButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetTambahButton1.setOpaque(true);
@@ -5442,6 +5506,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetUbahButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetUbahButton1.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetUbahButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetUbahButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/open_24.png"))); // NOI18N
         DashboardMKasetUbahButton1.setText("Buka Transaksi");
         DashboardMKasetUbahButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetUbahButton1.setOpaque(true);
@@ -5457,29 +5522,11 @@ public class DashboardFrame extends javax.swing.JFrame {
             }
         });
 
-        DashboardMKasetHapusButton1.setBackground(new java.awt.Color(114, 137, 218));
-        DashboardMKasetHapusButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        DashboardMKasetHapusButton1.setForeground(new java.awt.Color(255, 255, 255));
-        DashboardMKasetHapusButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DashboardMKasetHapusButton1.setText("Hapus");
-        DashboardMKasetHapusButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DashboardMKasetHapusButton1.setOpaque(true);
-        DashboardMKasetHapusButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DashboardMKasetHapusButton1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                DashboardMKasetHapusButton1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                DashboardMKasetHapusButton1MouseExited(evt);
-            }
-        });
-
         DashboardMKasetSegarkanButton1.setBackground(new java.awt.Color(114, 137, 218));
         DashboardMKasetSegarkanButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetSegarkanButton1.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetSegarkanButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetSegarkanButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/refresh_24.png"))); // NOI18N
         DashboardMKasetSegarkanButton1.setText("Segarkan");
         DashboardMKasetSegarkanButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetSegarkanButton1.setOpaque(true);
@@ -5500,20 +5547,25 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardContentSewaLayout.setHorizontalGroup(
             DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DashboardContentSewaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(DashboardContentSewaTitle)
-                .addContainerGap(838, Short.MAX_VALUE))
+                .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DashboardContentSewaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(DashboardContentSewaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DashboardMKasetCariButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DashboardContentSewaLayout.createSequentialGroup()
+                        .addGap(350, 350, 350)
+                        .addComponent(DashboardMKasetSegarkanButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(466, Short.MAX_VALUE))
             .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DashboardContentSewaLayout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(DashboardMKasetScrollPanel1)
+                        .addComponent(DashboardMKasetScrollPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
                         .addGroup(DashboardContentSewaLayout.createSequentialGroup()
                             .addGap(0, 0, Short.MAX_VALUE)
-                            .addComponent(DashboardMKasetCariButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
                             .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(DashboardMKasetCariInput1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
+                                .addComponent(DashboardMKasetCariInput1, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
                                 .addComponent(DashboardMKasetCariInputLine1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGap(18, 18, 18)
                             .addComponent(DashboardMKasetJenis1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5521,37 +5573,36 @@ public class DashboardFrame extends javax.swing.JFrame {
                             .addComponent(DashboardMKasetTambahButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(DashboardMKasetUbahButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(DashboardMKasetHapusButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(DashboardMKasetSegarkanButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 290, Short.MAX_VALUE)))
+                            .addGap(0, 0, Short.MAX_VALUE)))
                     .addContainerGap()))
         );
         DashboardContentSewaLayout.setVerticalGroup(
             DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DashboardContentSewaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DashboardContentSewaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(403, Short.MAX_VALUE))
+                .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(DashboardMKasetCariButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DashboardContentSewaTitle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
+                .addComponent(DashboardMKasetSegarkanButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DashboardContentSewaLayout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(DashboardContentSewaLayout.createSequentialGroup()
+                            .addComponent(DashboardMKasetJenis1)
+                            .addGap(12, 12, 12))
+                        .addGroup(DashboardContentSewaLayout.createSequentialGroup()
                             .addComponent(DashboardMKasetCariInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                            .addComponent(DashboardMKasetCariInputLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(DashboardMKasetJenis1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(DashboardMKasetCariButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGap(12, 12, 12)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(DashboardMKasetCariInputLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                     .addComponent(DashboardMKasetScrollPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(DashboardContentSewaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(DashboardMKasetTambahButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                        .addComponent(DashboardMKasetUbahButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DashboardMKasetSegarkanButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DashboardMKasetHapusButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(DashboardMKasetUbahButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addContainerGap()))
         );
 
@@ -5561,6 +5612,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardContentLaporanTitle.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         DashboardContentLaporanTitle.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentLaporanTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/report_24.png"))); // NOI18N
         DashboardContentLaporanTitle.setText("Laporan");
 
         jDateChooser2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -5618,6 +5670,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMKasetCariButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMKasetCariButton3.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMKasetCariButton3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMKasetCariButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/printer_24.png"))); // NOI18N
         DashboardMKasetCariButton3.setText("Cetak");
         DashboardMKasetCariButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMKasetCariButton3.setOpaque(true);
@@ -5629,16 +5682,19 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         DashboardContentLaporanTitle2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         DashboardContentLaporanTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentLaporanTitle2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/user_24.png"))); // NOI18N
         DashboardContentLaporanTitle2.setText("Total Penyewa: 0");
 
         DashboardContentLaporanTitle3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         DashboardContentLaporanTitle3.setForeground(new java.awt.Color(255, 255, 255));
         DashboardContentLaporanTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardContentLaporanTitle3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cd_24.png"))); // NOI18N
         DashboardContentLaporanTitle3.setText("Total Kaset Keluar: 0");
 
         DashboardContentLaporanTitle4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         DashboardContentLaporanTitle4.setForeground(new java.awt.Color(255, 255, 255));
         DashboardContentLaporanTitle4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        DashboardContentLaporanTitle4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/banknotes_24.png"))); // NOI18N
         DashboardContentLaporanTitle4.setText("Total Pendapatan: 0");
 
         javax.swing.GroupLayout DashboardContentLaporanLayout = new javax.swing.GroupLayout(DashboardContentLaporan);
@@ -5649,15 +5705,15 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
-                        .addComponent(DashboardContentLaporanTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                        .addComponent(DashboardContentLaporanTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109)
-                        .addComponent(DashboardContentLaporanTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(DashboardContentLaporanTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DashboardContentLaporanTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(DashboardContentLaporanTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                         .addComponent(DashboardContentLaporanTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(DashboardContentLaporanTitle1)
                         .addGap(18, 18, 18)
@@ -5682,7 +5738,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(DashboardContentLaporanTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jDateChooser3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(DashboardMKasetCariButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 370, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 365, Short.MAX_VALUE)
                 .addGroup(DashboardContentLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DashboardContentLaporanTitle2)
                     .addComponent(DashboardContentLaporanTitle3)
@@ -5692,7 +5748,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGroup(DashboardContentLaporanLayout.createSequentialGroup()
                     .addGap(63, 63, 63)
                     .addComponent(DashboardMKasetScrollPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(49, Short.MAX_VALUE)))
+                    .addContainerGap(46, Short.MAX_VALUE)))
         );
 
         DashboardContent.add(DashboardContentLaporan, "card5");
@@ -7968,18 +8024,6 @@ public class DashboardFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_DashboardMKasetUbahButton1MouseExited
 
-    private void DashboardMKasetHapusButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetHapusButton1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DashboardMKasetHapusButton1MouseClicked
-
-    private void DashboardMKasetHapusButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetHapusButton1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DashboardMKasetHapusButton1MouseEntered
-
-    private void DashboardMKasetHapusButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetHapusButton1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DashboardMKasetHapusButton1MouseExited
-
     private void DashboardMKasetSegarkanButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardMKasetSegarkanButton1MouseClicked
         // TODO add your handling code here:
         LoadTableData("Sewa","","");
@@ -8032,6 +8076,8 @@ public class DashboardFrame extends javax.swing.JFrame {
                 SewaProcessAwal.setVisible(false);
                 SewaProcessKedua.setVisible(true);
                 SewaProcessAkhir.setVisible(false);
+                
+                jDateChooser1.setMinSelectableDate(new java.util.Date());
             } else {
                 Master.showTholutDialogOk("Gagal", "Harus meminjam 1 kaset", "Failed");
             }
@@ -8650,14 +8696,17 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void PengaturanYesNo_Close1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanYesNo_Close1MouseClicked
         // TODO add your handling code here:
+        TransaksiYesNo.setVisible(false);
     }//GEN-LAST:event_PengaturanYesNo_Close1MouseClicked
 
     private void PengaturanYesNo_Close1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanYesNo_Close1MouseEntered
         // TODO add your handling code here:
+        PengaturanYesNo_Close1.setBackground(new java.awt.Color(240, 71, 71));
     }//GEN-LAST:event_PengaturanYesNo_Close1MouseEntered
 
     private void PengaturanYesNo_Close1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanYesNo_Close1MouseExited
         // TODO add your handling code here:
+        PengaturanYesNo_Close1.setBackground(new java.awt.Color(32,34,37));
     }//GEN-LAST:event_PengaturanYesNo_Close1MouseExited
 
     private void PengaturanYesNoTidakButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PengaturanYesNoTidakButton1MouseClicked
@@ -8790,7 +8839,6 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel DashboardMKasetCariInputLine;
     private javax.swing.JPanel DashboardMKasetCariInputLine1;
     private javax.swing.JLabel DashboardMKasetHapusButton;
-    private javax.swing.JLabel DashboardMKasetHapusButton1;
     private javax.swing.JComboBox<String> DashboardMKasetJenis;
     private javax.swing.JComboBox<String> DashboardMKasetJenis1;
     private javax.swing.JScrollPane DashboardMKasetScrollPanel;
@@ -8981,6 +9029,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel TBFTransaksiId32;
     private javax.swing.JLabel TBFTransaksiId33;
     private javax.swing.JLabel TBFTransaksiId34;
+    private javax.swing.JLabel TBFTransaksiId35;
+    private javax.swing.JLabel TBFTransaksiId36;
     private javax.swing.JLabel TBFTransaksiId4;
     private javax.swing.JLabel TBFTransaksiId5;
     private javax.swing.JLabel TBFTransaksiId6;
