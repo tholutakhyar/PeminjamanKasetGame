@@ -475,6 +475,18 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardContentBeranda = new javax.swing.JPanel();
         DashboardContentBerandaTitle = new javax.swing.JLabel();
         DashboardContentBerandaTitle1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        DashboardContentBerandaTitle10 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle9 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle8 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle7 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle11 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        DashboardContentBerandaTitle2 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle3 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle4 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle5 = new javax.swing.JLabel();
+        DashboardContentBerandaTitle6 = new javax.swing.JLabel();
         DashboardContentMUser = new javax.swing.JPanel();
         DashboardContentMUserTitle = new javax.swing.JLabel();
         DashboardMUserCariButton = new javax.swing.JLabel();
@@ -4890,6 +4902,118 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardContentBerandaTitle1.setForeground(new java.awt.Color(255, 255, 255));
         DashboardContentBerandaTitle1.setText("Selamat Datang Di Dashboard! Thol");
 
+        jPanel3.setBackground(new java.awt.Color(114, 137, 218));
+
+        DashboardContentBerandaTitle10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle10.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle10.setText("Hari Ini: 0");
+
+        DashboardContentBerandaTitle9.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle9.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle9.setText("Bulan Ini: 0");
+
+        DashboardContentBerandaTitle8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle8.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle8.setText("Tahun Ini: 0");
+
+        DashboardContentBerandaTitle7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle7.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle7.setText("Total: 0");
+
+        DashboardContentBerandaTitle11.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        DashboardContentBerandaTitle11.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/user_24.png"))); // NOI18N
+        DashboardContentBerandaTitle11.setText("Analisa Pelanggan:");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DashboardContentBerandaTitle11)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DashboardContentBerandaTitle10)
+                            .addComponent(DashboardContentBerandaTitle7)
+                            .addComponent(DashboardContentBerandaTitle9)
+                            .addComponent(DashboardContentBerandaTitle8))))
+                .addContainerGap(215, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(DashboardContentBerandaTitle11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel8.setBackground(new java.awt.Color(114, 137, 218));
+
+        DashboardContentBerandaTitle2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        DashboardContentBerandaTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cd_24.png"))); // NOI18N
+        DashboardContentBerandaTitle2.setText("Analisa Transaksi:");
+
+        DashboardContentBerandaTitle3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle3.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle3.setText("Hari Ini: 0");
+
+        DashboardContentBerandaTitle4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle4.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle4.setText("Bulan Ini: 0");
+
+        DashboardContentBerandaTitle5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle5.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle5.setText("Tahun Ini: 0");
+
+        DashboardContentBerandaTitle6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        DashboardContentBerandaTitle6.setForeground(new java.awt.Color(255, 255, 255));
+        DashboardContentBerandaTitle6.setText("Total: 0");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DashboardContentBerandaTitle2)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DashboardContentBerandaTitle3)
+                            .addComponent(DashboardContentBerandaTitle6)
+                            .addComponent(DashboardContentBerandaTitle4)
+                            .addComponent(DashboardContentBerandaTitle5))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(DashboardContentBerandaTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DashboardContentBerandaTitle6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout DashboardContentBerandaLayout = new javax.swing.GroupLayout(DashboardContentBeranda);
         DashboardContentBeranda.setLayout(DashboardContentBerandaLayout);
         DashboardContentBerandaLayout.setHorizontalGroup(
@@ -4897,10 +5021,14 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(DashboardContentBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
                     .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
                         .addComponent(DashboardContentBerandaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE))
+                    .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         DashboardContentBerandaLayout.setVerticalGroup(
@@ -4910,7 +5038,11 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addComponent(DashboardContentBerandaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(DashboardContentBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         DashboardContent.add(DashboardContentBeranda, "card1");
@@ -5791,7 +5923,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardFrame Dsbd = new DashboardFrame();
         Dsbd.setTitle("Dashboard - "+Master.RankName(GotRankID));
         Dsbd.setVisible(true);
-        Dsbd.DashboardLoginUsername.setText("Account: "+GotName+" ("+LocalRankName+")");
+        Dsbd.DashboardLoginUsername.setText(GotName+" ("+LocalRankName+")");
         Dsbd.AuthUserId = GotID;
         Dsbd.AuthName = GotName;
         Dsbd.AuthRank = LocalRankName;
@@ -5869,7 +6001,18 @@ public class DashboardFrame extends javax.swing.JFrame {
                 int xd = 0;
 
                 while (xd < data_sql.length) {
-                    DTM_Kaset.addRow(new Object[]{data_sql[xd][0],data_sql[xd][1],data_sql[xd][2],data_sql[xd][3],data_sql[xd][4],data_sql[xd][5]});
+                    DashboardResultSet = MySQL.MySQLQuery("SELECT COUNT(*) AS 'Jumlah' FROM transaksi_detil, transaksi WHERE transaksi.ts_status_kembali = '0' and transaksi_detil.ts_id = transaksi.ts_id and transaksi_detil.kaset_id = '"+data_sql[xd][0]+"'");
+                    if (DashboardResultSet.next()) {
+                        System.out.println("["+data_sql[xd][0]+"] Jumlah Kaset Keluar: "+DashboardResultSet.getString("Jumlah").toString());
+                        int counting = Integer.parseInt(data_sql[xd][4]) - Integer.parseInt(DashboardResultSet.getString("Jumlah"));
+                        System.out.println("["+data_sql[xd][0]+"] Kaset Tersedia Kaset: "+counting);
+                        if (counting >= 1) {
+                            DTM_Kaset.addRow(new Object[]{data_sql[xd][0],data_sql[xd][1],data_sql[xd][2],data_sql[xd][3],data_sql[xd][4]+" (Stok Sekarang: "+counting+")",data_sql[xd][5]});
+                        } else {
+                            DTM_Kaset.addRow(new Object[]{data_sql[xd][0],data_sql[xd][1],data_sql[xd][2],data_sql[xd][3],data_sql[xd][4]+" (Stok Sekarang: Kosong)",data_sql[xd][5]});
+                        }
+                    }
+                    
                     xd++;
                 }
             
@@ -6856,7 +6999,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void DashboardKeluarButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardKeluarButtonMouseClicked
         // TODO add your handling code here:
-        DashboardLoginUsername.setText("Account: null (rank)");
+        DashboardLoginUsername.setText("null (rank)");
         gui.LoginFrame pkg = new gui.LoginFrame();
         pkg.setVisible(true);
         AuthUserId = 0;
@@ -8805,6 +8948,16 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel DashboardContentBeranda;
     private javax.swing.JLabel DashboardContentBerandaTitle;
     private javax.swing.JLabel DashboardContentBerandaTitle1;
+    private javax.swing.JLabel DashboardContentBerandaTitle10;
+    private javax.swing.JLabel DashboardContentBerandaTitle11;
+    private javax.swing.JLabel DashboardContentBerandaTitle2;
+    private javax.swing.JLabel DashboardContentBerandaTitle3;
+    private javax.swing.JLabel DashboardContentBerandaTitle4;
+    private javax.swing.JLabel DashboardContentBerandaTitle5;
+    private javax.swing.JLabel DashboardContentBerandaTitle6;
+    private javax.swing.JLabel DashboardContentBerandaTitle7;
+    private javax.swing.JLabel DashboardContentBerandaTitle8;
+    private javax.swing.JLabel DashboardContentBerandaTitle9;
     private javax.swing.JPanel DashboardContentLaporan;
     private javax.swing.JLabel DashboardContentLaporanTitle;
     private javax.swing.JLabel DashboardContentLaporanTitle1;
@@ -9138,10 +9291,12 @@ public class DashboardFrame extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
