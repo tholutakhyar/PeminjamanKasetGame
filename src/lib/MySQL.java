@@ -13,6 +13,8 @@ import com.mysql.jdbc.Statement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -209,6 +211,18 @@ public class MySQL {
             case "SewaDetil":
                 TypeWhat = "SewaDetil";
                 break;
+            case "AnalisaHari":
+                TypeWhat = "AnalisaHari";
+                break;
+            case "AnalisaBulan":
+                TypeWhat = "AnalisaBulan";
+                break;
+            case "AnalisaTahun":
+                TypeWhat = "AnalisaTahun";
+                break;
+            case "AnalisaTotal":
+                TypeWhat = "AnalisaTotal";
+                break;
             default:
                 TypeWhat = "ts_id";
                 break;
@@ -223,6 +237,42 @@ public class MySQL {
         
         if ("mantapkuy".equals(TypeWhat)) {
             query = "select * from transaksi where ts_id like '%"+FindWhat+"%' and status_pending = '0' order by ts_status_kembali asc";
+        }
+        
+        // Analisa
+        
+            java.sql.Date date_today2 = new java.sql.Date(new java.util.Date().getTime());
+            DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+            String kuyyy = fmt.format(date_today2);            
+            
+            String dariHari = kuyyy.substring(8);
+        
+            if ("0".equals(dariHari.substring(0,1))) {
+                dariHari = dariHari.substring(1,2);
+            }
+
+            String dariBulan = kuyyy.substring(5,7);
+
+            if ("0".equals(dariBulan.substring(0,1))) {
+                dariBulan = dariBulan.substring(1,2);
+            }
+
+            String dariTahun = kuyyy.substring(0,4);
+        
+        if ("AnalisaHari".equals(TypeWhat)) {
+            query = "select * from transaksi where day(ts_tgl_peminjaman) >= '"+dariHari+"' and status_pending = '0'";
+        }
+        
+        if ("AnalisaBulan".equals(TypeWhat)) {
+            query = "select * from transaksi where month(ts_tgl_peminjaman) >= '"+dariBulan+"' and status_pending = '0'";
+        }
+        
+        if ("AnalisaTahun".equals(TypeWhat)) {
+            query = "select * from transaksi where year(ts_tgl_peminjaman) >= '"+dariTahun+"' and status_pending = '0'";
+        }
+        
+        if ("AnalisaTotal".equals(TypeWhat)) {
+            query = "select * from transaksi where status_pending = '0'";
         }
         
         // Counting Data
