@@ -59,7 +59,7 @@ public class Master {
         if (MasterResultSet.next()) {
             resultnm = MasterResultSet.getString("user_namalengkap"); 
         } else {
-            resultnm = String.valueOf(UserId);
+            resultnm = "User Sudah Di Hapus";
         }
         
         return resultnm;

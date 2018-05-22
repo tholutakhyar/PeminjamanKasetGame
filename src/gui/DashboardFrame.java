@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -389,6 +390,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFTransaksiId32 = new javax.swing.JLabel();
         TBFTransaksiId33 = new javax.swing.JLabel();
         TBFTransaksiId34 = new javax.swing.JLabel();
+        TBFTransaksiId37 = new javax.swing.JLabel();
+        TBFTransaksiId38 = new javax.swing.JLabel();
+        TBFTransaksiId39 = new javax.swing.JLabel();
+        TBFTransaksiId40 = new javax.swing.JLabel();
+        TBFTransaksiId41 = new javax.swing.JLabel();
+        TBFTransaksiId42 = new javax.swing.JLabel();
         SewaProcessAkhir = new javax.swing.JPanel();
         DashboardDetilSewaScrollPanel3 = new javax.swing.JScrollPane();
         DashboardDetilSewaTable3 = new javax.swing.JTable();
@@ -417,6 +424,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFTransaksiId25 = new javax.swing.JLabel();
         TBFTransaksiId30 = new javax.swing.JLabel();
         TBFTransaksiId31 = new javax.swing.JLabel();
+        TBFTransaksiId43 = new javax.swing.JLabel();
+        TBFTransaksiId44 = new javax.swing.JLabel();
+        TBFTransaksiId45 = new javax.swing.JLabel();
+        TBFTransaksiId46 = new javax.swing.JLabel();
+        TBFTransaksiId47 = new javax.swing.JLabel();
+        TBFTransaksiId48 = new javax.swing.JLabel();
         TransaksiCariUserFrame = new javax.swing.JFrame();
         jPanel6 = new javax.swing.JPanel();
         PengaturanYesNoHeader9 = new javax.swing.JPanel();
@@ -491,6 +504,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardContentBerandaTitle4 = new javax.swing.JLabel();
         DashboardContentBerandaTitle5 = new javax.swing.JLabel();
         DashboardContentBerandaTitle6 = new javax.swing.JLabel();
+        NotifJatuhTempo1 = new javax.swing.JLabel();
         DashboardContentMUser = new javax.swing.JPanel();
         DashboardContentMUserTitle = new javax.swing.JLabel();
         DashboardMUserCariButton = new javax.swing.JLabel();
@@ -2951,6 +2965,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton2.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/reset_24.png"))); // NOI18N
         DashboardMUserTambahButton2.setText("Reset");
         DashboardMUserTambahButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton2.setOpaque(true);
@@ -2990,6 +3005,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton4.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cancel_24.png"))); // NOI18N
         DashboardMUserTambahButton4.setText("Batal");
         DashboardMUserTambahButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton4.setOpaque(true);
@@ -3313,6 +3329,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton11.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cancel_24.png"))); // NOI18N
         DashboardMUserTambahButton11.setText("Batal");
         DashboardMUserTambahButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton11.setOpaque(true);
@@ -3379,6 +3396,11 @@ public class DashboardFrame extends javax.swing.JFrame {
         jDateChooser1.setDateFormatString("yyyy - MM - d");
         jDateChooser1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jDateChooser1.setMinSelectableDate(new java.util.Date(-62125369200000L));
+        jDateChooser1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jDateChooser1PropertyChange(evt);
+            }
+        });
 
         TBFTransaksiId32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         TBFTransaksiId32.setForeground(new java.awt.Color(255, 255, 255));
@@ -3394,6 +3416,36 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFTransaksiId34.setForeground(new java.awt.Color(255, 255, 255));
         TBFTransaksiId34.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         TBFTransaksiId34.setText(":");
+
+        TBFTransaksiId37.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId37.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId37.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId37.setText("1500/hari");
+
+        TBFTransaksiId38.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId38.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId38.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId38.setText(":");
+
+        TBFTransaksiId39.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId39.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId39.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId39.setText("Harga Per Hari");
+
+        TBFTransaksiId40.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId40.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId40.setText("Total Hari");
+
+        TBFTransaksiId41.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId41.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId41.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId41.setText(":");
+
+        TBFTransaksiId42.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId42.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId42.setText("0 Hari");
 
         javax.swing.GroupLayout SewaProcessKeduaLayout = new javax.swing.GroupLayout(SewaProcessKedua);
         SewaProcessKedua.setLayout(SewaProcessKeduaLayout);
@@ -3416,11 +3468,6 @@ public class DashboardFrame extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SewaProcessKeduaLayout.createSequentialGroup()
                         .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(SewaProcessKeduaLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(TBFTransaksiId7, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TBFTransaksiId6, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SewaProcessKeduaLayout.createSequentialGroup()
                                 .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TBFTransaksiId32)
@@ -3438,7 +3485,25 @@ public class DashboardFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TBFTransaksiId5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TBFTransaksiId4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(TBFTransaksiId4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SewaProcessKeduaLayout.createSequentialGroup()
+                                .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TBFTransaksiId39)
+                                    .addComponent(TBFTransaksiId40))
+                                .addGap(84, 84, 84)
+                                .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(SewaProcessKeduaLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId38)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(TBFTransaksiId37))
+                                    .addGroup(SewaProcessKeduaLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId41)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(TBFTransaksiId42)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TBFTransaksiId7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TBFTransaksiId6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(29, 29, 29)
                         .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField4)
@@ -3466,7 +3531,15 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TBFTransaksiId4)))
+                            .addComponent(TBFTransaksiId4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TBFTransaksiId6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TBFTransaksiId7)))
                     .addGroup(SewaProcessKeduaLayout.createSequentialGroup()
                         .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TBFTransaksiId32)
@@ -3477,15 +3550,17 @@ public class DashboardFrame extends javax.swing.JFrame {
                             .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(TBFTransaksiId9)
                                 .addComponent(TBFTransaksiId34))
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TBFTransaksiId6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TBFTransaksiId7))
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TBFTransaksiId39)
+                            .addComponent(TBFTransaksiId38)
+                            .addComponent(TBFTransaksiId37))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TBFTransaksiId40)
+                            .addComponent(TBFTransaksiId41)
+                            .addComponent(TBFTransaksiId42))))
                 .addGap(19, 19, 19)
                 .addGroup(SewaProcessKeduaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DashboardMUserTambahButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
@@ -3540,7 +3615,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton10.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DashboardMUserTambahButton10.setText("Buat Lagi");
+        DashboardMUserTambahButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/plus_24.png"))); // NOI18N
+        DashboardMUserTambahButton10.setText("Transaksi Baru");
         DashboardMUserTambahButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton10.setOpaque(true);
         DashboardMUserTambahButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3559,6 +3635,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton13.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/cancel_24.png"))); // NOI18N
         DashboardMUserTambahButton13.setText("Tutup");
         DashboardMUserTambahButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton13.setOpaque(true);
@@ -3613,6 +3690,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         DashboardMUserTambahButton14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DashboardMUserTambahButton14.setForeground(new java.awt.Color(255, 255, 255));
         DashboardMUserTambahButton14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DashboardMUserTambahButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/printer_24.png"))); // NOI18N
         DashboardMUserTambahButton14.setText("Cetak");
         DashboardMUserTambahButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardMUserTambahButton14.setOpaque(true);
@@ -3703,6 +3781,36 @@ public class DashboardFrame extends javax.swing.JFrame {
         TBFTransaksiId31.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         TBFTransaksiId31.setText("0");
 
+        TBFTransaksiId43.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId43.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId43.setText("Total Hari");
+
+        TBFTransaksiId44.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId44.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId44.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId44.setText("Harga Per Hari");
+
+        TBFTransaksiId45.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId45.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId45.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId45.setText("0/hari");
+
+        TBFTransaksiId46.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId46.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId46.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId46.setText("0 Hari");
+
+        TBFTransaksiId47.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId47.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId47.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId47.setText(":");
+
+        TBFTransaksiId48.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TBFTransaksiId48.setForeground(new java.awt.Color(255, 255, 255));
+        TBFTransaksiId48.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TBFTransaksiId48.setText(":");
+
         javax.swing.GroupLayout SewaProcessAkhirLayout = new javax.swing.GroupLayout(SewaProcessAkhir);
         SewaProcessAkhir.setLayout(SewaProcessAkhirLayout);
         SewaProcessAkhirLayout.setHorizontalGroup(
@@ -3721,29 +3829,37 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addComponent(DashboardMUserTambahButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SewaProcessAkhirLayout.createSequentialGroup()
-                        .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SewaProcessAkhirLayout.createSequentialGroup()
-                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TBFTransaksiId27)
-                                    .addComponent(TBFTransaksiId26))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TBFTransaksiId27)
+                            .addComponent(TBFTransaksiId26)
+                            .addComponent(TBFTransaksiId43)
+                            .addComponent(TBFTransaksiId44))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
                                 .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(TBFTransaksiId29)
                                     .addComponent(TBFTransaksiId28))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TBFTransaksiId16)
-                                    .addComponent(TBFTransaksiId15))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TBFTransaksiId18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(TBFTransaksiId20, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                    .addComponent(TBFTransaksiId17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(TBFTransaksiId15)))
                             .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(TBFTransaksiId25, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TBFTransaksiId19, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TBFTransaksiId48)
+                                    .addComponent(TBFTransaksiId47))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TBFTransaksiId46)
+                                    .addComponent(TBFTransaksiId45))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(TBFTransaksiId18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TBFTransaksiId20, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                .addComponent(TBFTransaksiId17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(TBFTransaksiId25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TBFTransaksiId19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
                                 .addGap(14, 14, 14)
@@ -3787,23 +3903,38 @@ public class DashboardFrame extends javax.swing.JFrame {
                                 .addComponent(TBFTransaksiId13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(TBFTransaksiId14))
-                            .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
-                                    .addComponent(TBFTransaksiId12)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(TBFTransaksiId11))
-                                .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
-                                    .addComponent(TBFTransaksiId26)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(TBFTransaksiId27))
-                                .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
-                                    .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(TBFTransaksiId29)
-                                        .addComponent(TBFTransaksiId15))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(TBFTransaksiId28)
-                                        .addComponent(TBFTransaksiId16))))
+                            .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId12)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(TBFTransaksiId11))
+                                    .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId26)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(TBFTransaksiId27))
+                                    .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                        .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(TBFTransaksiId29)
+                                            .addComponent(TBFTransaksiId15))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(TBFTransaksiId28)
+                                            .addComponent(TBFTransaksiId16))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SewaProcessAkhirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId44)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(TBFTransaksiId43))
+                                    .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId45)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(TBFTransaksiId46))
+                                    .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
+                                        .addComponent(TBFTransaksiId48)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(TBFTransaksiId47))))
                             .addGroup(SewaProcessAkhirLayout.createSequentialGroup()
                                 .addComponent(TBFTransaksiId21)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4860,6 +4991,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         NotifJatuhTempo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         NotifJatuhTempo.setForeground(new java.awt.Color(255, 255, 255));
         NotifJatuhTempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        NotifJatuhTempo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/warning_16.png"))); // NOI18N
         NotifJatuhTempo.setText("2 Pelanggan Telah Jatuh Tempo");
         NotifJatuhTempo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         NotifJatuhTempo.setOpaque(true);
@@ -4971,7 +5103,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(DashboardContentBerandaTitle11, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5027,7 +5159,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                             .addComponent(DashboardContentBerandaTitle6)
                             .addComponent(DashboardContentBerandaTitle4)
                             .addComponent(DashboardContentBerandaTitle5))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5045,6 +5177,26 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        NotifJatuhTempo1.setBackground(new java.awt.Color(240, 71, 71));
+        NotifJatuhTempo1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        NotifJatuhTempo1.setForeground(new java.awt.Color(255, 255, 255));
+        NotifJatuhTempo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        NotifJatuhTempo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon/warning_32.png"))); // NOI18N
+        NotifJatuhTempo1.setText("2 Pelanggan Telah Jatuh Tempo");
+        NotifJatuhTempo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        NotifJatuhTempo1.setOpaque(true);
+        NotifJatuhTempo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NotifJatuhTempo1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                NotifJatuhTempo1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                NotifJatuhTempo1MouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout DashboardContentBerandaLayout = new javax.swing.GroupLayout(DashboardContentBeranda);
         DashboardContentBeranda.setLayout(DashboardContentBerandaLayout);
         DashboardContentBerandaLayout.setHorizontalGroup(
@@ -5052,14 +5204,16 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(DashboardContentBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                    .addComponent(NotifJatuhTempo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DashboardContentBerandaTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
-                        .addComponent(DashboardContentBerandaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(DashboardContentBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DashboardContentBerandaTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(DashboardContentBerandaLayout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         DashboardContentBerandaLayout.setVerticalGroup(
@@ -5073,7 +5227,9 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGroup(DashboardContentBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(NotifJatuhTempo1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         DashboardContent.add(DashboardContentBeranda, "card1");
@@ -5955,7 +6111,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
             String kuyyy = fmt.format(date_today2);
             
-            String queryw = "select count(*) as 'Jumlah' from transaksi where '"+kuyyy+"' >= ts_tgl_pengembalian and status_pending = '0' and ts_status_kembali = '0'";
+            String queryw = "select count(*) as 'Jumlah' from transaksi where '"+kuyyy+"' > ts_tgl_pengembalian and status_pending = '0' and ts_status_kembali = '0'";
             System.out.println(queryw);
             DashboardResultSet = MySQL.MySQLQuery(queryw);
             if (DashboardResultSet.next()) {
@@ -5965,12 +6121,15 @@ public class DashboardFrame extends javax.swing.JFrame {
                 if (counting == 0) {
                     JatuhTempo = false;
                     DashboardSewaButton.setText("Sewa Kaset");
+                    NotifJatuhTempo1.setVisible(false);
                     if (DashboardContentSewa.isVisible() == false ) {
                         DashboardSewaButton.setBackground(new java.awt.Color(114,137,218));
                     }
                 } else if (counting >= 1) {
                     JatuhTempo = true;
                     DashboardSewaButton.setText("Sewa Kaset ("+counting+")");
+                    NotifJatuhTempo1.setText(counting+" Pelanggan Telah Jatuh Tempo");
+                    NotifJatuhTempo1.setVisible(true);
                     NotifJatuhTempo.setText(counting+" Pelanggan Telah Jatuh Tempo");
                     if (DashboardContentSewa.isVisible() == false ) {
                         DashboardSewaButton.setBackground(new java.awt.Color(240, 71, 71));
@@ -6205,12 +6364,12 @@ public class DashboardFrame extends javax.swing.JFrame {
                 int xd = 0;
 
                 while (xd < data_sql.length) {
-                    String jUgs = "select count(*) as 'Jumlah' from transaksi where ts_id = '"+data_sql[xd][0]+"' and '"+kuyyy+"' >= ts_tgl_pengembalian and status_pending = '0' and ts_status_kembali = '0'";
+                    String jUgs = "select count(*) as 'Jumlah' from transaksi where ts_id = '"+data_sql[xd][0]+"' and '"+kuyyy+"' > ts_tgl_pengembalian and status_pending = '0' and ts_status_kembali = '0'";
                     DashboardResultSet = MySQL.MySQLQuery(jUgs);
                     if (DashboardResultSet.next()) {
                         System.out.println("Data "+DashboardResultSet.getString("Jumlah"));
                         if ("1".equals(DashboardResultSet.getString("Jumlah"))) {
-                            DTM_Sewa.addRow(new Object[]{"<html><p style='color:red'>"+data_sql[xd][0]+"</p></html>","<html><p style='color:red'>"+Master.GetName(Integer.parseInt(data_sql[xd][1]))+"</p></html>","<html><p style='color:red'>"+Master.GetName(Integer.parseInt(data_sql[xd][2]))+"</p></html>","<html><p style='color:red'>"+Master.GetStatus(Integer.parseInt(data_sql[xd][3]))+"</p></html>","<html><p style='color:red'>"+data_sql[xd][4]+"</p></html>","<html><p style='color:red'>"+data_sql[xd][5]+"</p></html>","<html><p style='color:red'>"+data_sql[xd][6]+"</p></html>","<html><p style='color:red'>"+data_sql[xd][7]+"</p></html>","<html><p style='color:red;'>"+data_sql[xd][8]+"</p></html>"});
+                            DTM_Sewa.addRow(new Object[]{data_sql[xd][0],"<html><p style='color:red'>"+Master.GetName(Integer.parseInt(data_sql[xd][1]))+"</p></html>","<html><p style='color:red'>"+Master.GetName(Integer.parseInt(data_sql[xd][2]))+"</p></html>","<html><p style='color:red'>"+Master.GetStatus(Integer.parseInt(data_sql[xd][3]))+"</p></html>","<html><p style='color:red'>"+data_sql[xd][4]+"</p></html>","<html><p style='color:red'>"+data_sql[xd][5]+"</p></html>","<html><p style='color:red'>"+data_sql[xd][6]+"</p></html>","<html><p style='color:red'>"+data_sql[xd][7]+"</p></html>","<html><p style='color:red;'>"+data_sql[xd][8]+"</p></html>"});
                         } else {
                             DTM_Sewa.addRow(new Object[]{data_sql[xd][0],Master.GetName(Integer.parseInt(data_sql[xd][1])),Master.GetName(Integer.parseInt(data_sql[xd][2])),Master.GetStatus(Integer.parseInt(data_sql[xd][3])),data_sql[xd][4],data_sql[xd][5],data_sql[xd][6],data_sql[xd][7],data_sql[xd][8]});
                         }
@@ -6306,6 +6465,9 @@ public class DashboardFrame extends javax.swing.JFrame {
             TBFTransaksiId3.setText("Total: Rp 0");
             jTextField1.setText("0");
             jTextField3.setText("0");
+            TBFTransaksiId37.setText("0/hari");
+            TBFTransaksiId42.setText("0 Hari");
+            TBFTransaksiId45.setText("0/hari");
         } else if ("Hapus".equals(whatmodel)) {
             System.out.println("hapus barang di list transaksi");
             int Row_ID = DashboardDetilSewaTable1.getSelectedRow();
@@ -6335,6 +6497,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if ("Checkout".equals(whatmodel)) {
+            if (!"".equals(jTextField4.getText())) {
             int bayarrr = Integer.parseInt(jTextField4.getText());
             int subtoalll = Integer.parseInt(jTextField1.getText());
             int diskonnn = Integer.parseInt(jTextField2.getText());
@@ -6372,6 +6535,10 @@ public class DashboardFrame extends javax.swing.JFrame {
             } else {
                 System.out.println("tanggalnya di isi");
                 Master.showTholutDialogOk("Informasi", "Tanggal pengembalian kosong", "Information");
+            }
+            } else {
+                System.out.println("kosongan bayarnya maling");
+                Master.showTholutDialogOk("Informasi", "Maaf uangnya kurang", "Information");
             }
         } else if ("Mengembalikan".equals(whatmodel)) {
             System.out.println("kaset kembali");
@@ -8576,6 +8743,8 @@ public class DashboardFrame extends javax.swing.JFrame {
             TBFTransaksiId3.setText("Total: Rp "+Total);
             jTextField1.setText(""+Total);
             jTextField3.setText(""+Total);
+            TBFTransaksiId37.setText(Total+"/hari");
+            TBFTransaksiId45.setText(Total+"/hari");
         } catch (SQLException ex) {
                 System.out.println(ex);
         }
@@ -9131,6 +9300,35 @@ public class DashboardFrame extends javax.swing.JFrame {
     private void NotifJatuhTempoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NotifJatuhTempoMouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_NotifJatuhTempoMouseExited
+
+    private void NotifJatuhTempo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NotifJatuhTempo1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NotifJatuhTempo1MouseClicked
+
+    private void NotifJatuhTempo1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NotifJatuhTempo1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NotifJatuhTempo1MouseEntered
+
+    private void NotifJatuhTempo1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NotifJatuhTempo1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NotifJatuhTempo1MouseExited
+
+    private void jDateChooser1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooser1PropertyChange
+        // TODO add your handling code here:
+        if (jDateChooser1.getDate() != null) {
+            java.sql.Date date_today22 = new java.sql.Date(new java.util.Date().getTime());
+            Date date1 = date_today22;
+            Date date2 = jDateChooser1.getDate(); 
+            long dapettgl = date2.getTime() - date1.getTime();
+            int jadiberapa = ((int) dapettgl / (1000*60*60*24))+1;
+            int okehitung = Integer.parseInt(jTextField1.getText())*jadiberapa;
+            TBFTransaksiId42.setText(jadiberapa+" Hari");
+            TBFTransaksiId46.setText(jadiberapa+" Hari");
+            jTextField3.setText(okehitung+"");
+            
+            System.out.print(jadiberapa+" tgl"+date_today22);
+        }
+    }//GEN-LAST:event_jDateChooser1PropertyChange
         
     /**
      * @param args the command line arguments
@@ -9279,6 +9477,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel DialogDelete_Title;
     private javax.swing.JFrame LoadingCetak;
     private javax.swing.JLabel NotifJatuhTempo;
+    private javax.swing.JLabel NotifJatuhTempo1;
     private javax.swing.JTextField PengaturanAlamatInput;
     private javax.swing.JPanel PengaturanAlamatInputLine;
     private javax.swing.JLabel PengaturanAlamatInputTitle;
@@ -9412,7 +9611,19 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel TBFTransaksiId34;
     private javax.swing.JLabel TBFTransaksiId35;
     private javax.swing.JLabel TBFTransaksiId36;
+    private javax.swing.JLabel TBFTransaksiId37;
+    private javax.swing.JLabel TBFTransaksiId38;
+    private javax.swing.JLabel TBFTransaksiId39;
     private javax.swing.JLabel TBFTransaksiId4;
+    private javax.swing.JLabel TBFTransaksiId40;
+    private javax.swing.JLabel TBFTransaksiId41;
+    private javax.swing.JLabel TBFTransaksiId42;
+    private javax.swing.JLabel TBFTransaksiId43;
+    private javax.swing.JLabel TBFTransaksiId44;
+    private javax.swing.JLabel TBFTransaksiId45;
+    private javax.swing.JLabel TBFTransaksiId46;
+    private javax.swing.JLabel TBFTransaksiId47;
+    private javax.swing.JLabel TBFTransaksiId48;
     private javax.swing.JLabel TBFTransaksiId5;
     private javax.swing.JLabel TBFTransaksiId6;
     private javax.swing.JLabel TBFTransaksiId7;
