@@ -6105,6 +6105,18 @@ public class DashboardFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    private boolean isUsernameExist(String what) {
+        String queryw = "select * from user where username = '"+what+"'";
+        boolean kuttt = false;
+        try {
+            DashboardResultSet = MySQL.MySQLQuery(queryw);
+            kuttt = DashboardResultSet.next();
+        } catch (SQLException ex) {
+            Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return kuttt;
+    }
+    
     public void JatuhTempoCheck() {
         try {
             java.sql.Date date_today2 = new java.sql.Date(new java.util.Date().getTime());
@@ -6839,17 +6851,33 @@ public class DashboardFrame extends javax.swing.JFrame {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         String tmp_dte22 = fmt.format(this.PengaturanTanggalLahirInput.getDate());
         
-        int hasil = MySQL.MySQLUpdate("UPDATE user SET username = '"+PengaturanUsernameInput.getText()+"', password = '"+PengaturanPasswordInput.getText()+"',user_namalengkap = '"+PengaturanNMLengkapInput.getText()+"',user_alamat = '"+PengaturanAlamatInput.getText()+"',user_nik_ktp = '"+PengaturanNikKtpInput.getText()+"' ,user_telp = '"+PengaturanTeleponInput.getText()+"',user_email = '"+PengaturanEmailInput.getText()+"',user_tgl_lahir = '"+tmp_dte22+"' WHERE user_id = '"+AuthUserId+"' ");
-        
-        if (hasil == 1) {
-            System.out.println("data ter update");
-            Master.showTholutDialogOk("Success", "Data berhasil di ubah", "Success");
-            LoadTableData("User","","");
-            UbahTambahUserDialog.setVisible(false);
-        } else {
-            System.out.println("data gagal di update");
-            Master.showTholutDialogOk("Failed", "Data gagal di ubah", "Failed");
+        String queryw = "select * from user where username = '"+PengaturanUsernameInput.getText()+"' and user_id != '"+AuthUserId+"'";
+        boolean kuttt = false;
+        try {
+            DashboardResultSet = MySQL.MySQLQuery(queryw);
+            kuttt = DashboardResultSet.next();
+        } catch (SQLException ex) {
+            Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+            if (!kuttt) {
+
+                int hasil = MySQL.MySQLUpdate("UPDATE user SET username = '"+PengaturanUsernameInput.getText()+"', password = '"+PengaturanPasswordInput.getText()+"',user_namalengkap = '"+PengaturanNMLengkapInput.getText()+"',user_alamat = '"+PengaturanAlamatInput.getText()+"',user_nik_ktp = '"+PengaturanNikKtpInput.getText()+"' ,user_telp = '"+PengaturanTeleponInput.getText()+"',user_email = '"+PengaturanEmailInput.getText()+"',user_tgl_lahir = '"+tmp_dte22+"' WHERE user_id = '"+AuthUserId+"' ");
+
+                if (hasil == 1) {
+                    System.out.println("data ter update");
+                    Master.showTholutDialogOk("Success", "Data berhasil di ubah", "Success");
+                    LoadTableData("User","","");
+                    UbahTambahUserDialog.setVisible(false);
+                } else {
+                    System.out.println("data gagal di update");
+                    Master.showTholutDialogOk("Failed", "Data gagal di ubah", "Failed");
+                }
+
+            } else {
+                System.out.println("mantap kuy username kepake");
+                Master.showTholutDialogOk("Peringatan", "Maaf username sudah digunakan", "Warning");
+            }
     }
     
     private void LaporanAinx() {
@@ -7930,32 +7958,40 @@ public class DashboardFrame extends javax.swing.JFrame {
             UTUserAlamatInput.getText()
         };
         
-        if (data_k[0] != null && !"Username".equals(data_k[0]) &&
-            data_k[1] != null  && !"Nama Lengkap".equals(data_k[1]) &&
-            data_k[2] != null  && !"Nik KTP".equals(data_k[2]) &&
-            data_k[3] != null  && !"Telepon".equals(data_k[3]) &&
-            data_k[4] != null  && !"Email".equals(data_k[4]) &&
-            data_k[5] != null  && !"Password".equals(data_k[5]) &&
-            data_k[6] != null  &&
-            data_k[7] != null && !"Alamat".equals(data_k[7]) &&
-            UTUserTanggalLahirInput.getDate() != null) {
-            DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-            String tmp_dte = fmt.format(this.UTUserTanggalLahirInput.getDate());
+        System.out.print(AuthRank);
+        
+        if ((data_k[5] != null && !"Password".equals(data_k[5])) || "Karyawan".equals(AuthRank)) {
+            if ((data_k[6] != null) || "Karyawan".equals(AuthRank)) {
+                if (data_k[0] != null && !"Username".equals(data_k[0]) &&
+                    data_k[1] != null  && !"Nama Lengkap".equals(data_k[1]) &&
+                    data_k[2] != null  && !"Nik KTP".equals(data_k[2]) &&
+                    data_k[3] != null  && !"Telepon".equals(data_k[3]) &&
+                    data_k[4] != null  && !"Email".equals(data_k[4]) &&
+                    data_k[7] != null && !"Alamat".equals(data_k[7]) &&
+                    UTUserTanggalLahirInput.getDate() != null) {
+                    DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                    String tmp_dte = fmt.format(this.UTUserTanggalLahirInput.getDate());
 
-            UbahTambahDialogDetail.setText(
-                "Username: "+data_k[0]+
-                "\nPassword: "+data_k[5]+
-                "\nNama Lengkap: "+data_k[1]+
-                "\nEmail: "+data_k[4]+
-                "\nTelepon: "+data_k[3]+
-                "\nNik KTP: "+data_k[2]+
-                "\nAlamat: "+data_k[7]+
-                "\nJabatan: "+data_k[6]+
-                "\nTanggal Lahir: "+tmp_dte
-            );
-            UbahTambahDialogYesNo.setVisible(true);
+                    UbahTambahDialogDetail.setText(
+                        "Username: "+data_k[0]+
+                        "\nPassword: "+data_k[5]+
+                        "\nNama Lengkap: "+data_k[1]+
+                        "\nEmail: "+data_k[4]+
+                        "\nTelepon: "+data_k[3]+
+                        "\nNik KTP: "+data_k[2]+
+                        "\nAlamat: "+data_k[7]+
+                        "\nJabatan: "+data_k[6]+
+                        "\nTanggal Lahir: "+tmp_dte
+                    );
+                    UbahTambahDialogYesNo.setVisible(true);
+                } else {
+                   Master.showTholutDialogOk("Peringatan", "Data tidak boleh kosong!", "Warning"); 
+                }
+            } else {
+                Master.showTholutDialogOk("Peringatan", "Data tidak boleh kosong!", "Warning"); 
+            }
         } else {
-           Master.showTholutDialogOk("Peringatan", "Data tidak boleh kosong!", "Warning"); 
+            Master.showTholutDialogOk("Peringatan", "Data tidak boleh kosong!", "Warning"); 
         }
     }//GEN-LAST:event_UTUserButtonTambahMouseClicked
 
@@ -8083,16 +8119,21 @@ public class DashboardFrame extends javax.swing.JFrame {
                 try {
                     
                     java.sql.Timestamp date_today = new java.sql.Timestamp(new java.util.Date().getTime());
-
-                    int hasil = MySQL.MySQLUpdate("INSERT into user(username,password,user_namalengkap,user_alamat,user_nik_ktp,user_telp,user_email,user_jabatan,user_tgl_lahir,user_tgl_masuk)values('"+data_user[0]+"','"+data_user[5]+"','"+data_user[1]+"','"+data_user[7]+"','"+data_user[2]+"','"+data_user[3]+"','"+data_user[4]+"', '"+tmp_jbt+"', '"+tmp_dte+"', '"+date_today+"')");
-                    if (hasil == 1) {
-                        System.out.println("data ter masukan");
-                        Master.showTholutDialogOk("Success", "Data berhasil di tambahkan", "Success");
-                        LoadTableData("User","","");
-                        UbahTambahUserDialog.setVisible(false);
+                    
+                    if (!isUsernameExist(data_user[0])) {
+                        int hasil = MySQL.MySQLUpdate("INSERT into user(username,password,user_namalengkap,user_alamat,user_nik_ktp,user_telp,user_email,user_jabatan,user_tgl_lahir,user_tgl_masuk)values('"+data_user[0]+"','"+data_user[5]+"','"+data_user[1]+"','"+data_user[7]+"','"+data_user[2]+"','"+data_user[3]+"','"+data_user[4]+"', '"+tmp_jbt+"', '"+tmp_dte+"', '"+date_today+"')");
+                        if (hasil == 1) {
+                            System.out.println("data ter masukan");
+                            Master.showTholutDialogOk("Success", "Data berhasil di tambahkan", "Success");
+                            LoadTableData("User","","");
+                            UbahTambahUserDialog.setVisible(false);
+                        } else {
+                            System.out.println("data gagal dimasukan");
+                            Master.showTholutDialogOk("Failed", "Data gagal di tambahkan", "Failed");
+                        }
                     } else {
-                        System.out.println("data gagal dimasukan");
-                        Master.showTholutDialogOk("Failed", "Data gagal di tambahkan", "Failed");
+                        System.out.println("mantap kuy username kepake");
+                        Master.showTholutDialogOk("Peringatan", "Maaf username sudah digunakan", "Warning");
                     }
                 } catch (SQLException ex) {
                     System.out.println(ex);
@@ -8100,15 +8141,29 @@ public class DashboardFrame extends javax.swing.JFrame {
             } else if ("Ubah".equals(Type)) {
                 try {
                     
-                    int hasil = MySQL.MySQLUpdate("UPDATE user SET username = '"+data_user[0]+"', password = '"+data_user[5]+"',user_namalengkap = '"+data_user[1]+"',user_alamat = '"+data_user[7]+"',user_nik_ktp = '"+data_user[2]+"' ,user_telp = '"+data_user[3]+"',user_email = '"+data_user[4]+"',user_jabatan = '"+tmp_jbt+"',user_tgl_lahir = '"+tmp_dte+"' WHERE user_id = '"+IdDialogYesNo+"' ");
-                    if (hasil == 1) {
-                        System.out.println("data ter update");
-                        Master.showTholutDialogOk("Success", "Data berhasil di ubah", "Success");
-                        LoadTableData("User","","");
-                        UbahTambahUserDialog.setVisible(false);
+                    String queryw = "select * from user where username = '"+data_user[0]+"' and user_id != '"+IdDialogYesNo+"'";
+                    boolean kuttt = false;
+                    try {
+                        DashboardResultSet = MySQL.MySQLQuery(queryw);
+                        kuttt = DashboardResultSet.next();
+                    } catch (SQLException ex) {
+                        Logger.getLogger(DashboardFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    if (!kuttt) {
+                        int hasil = MySQL.MySQLUpdate("UPDATE user SET username = '"+data_user[0]+"', password = '"+data_user[5]+"',user_namalengkap = '"+data_user[1]+"',user_alamat = '"+data_user[7]+"',user_nik_ktp = '"+data_user[2]+"' ,user_telp = '"+data_user[3]+"',user_email = '"+data_user[4]+"',user_jabatan = '"+tmp_jbt+"',user_tgl_lahir = '"+tmp_dte+"' WHERE user_id = '"+IdDialogYesNo+"' ");
+                        if (hasil == 1) {
+                            System.out.println("data ter update");
+                            Master.showTholutDialogOk("Success", "Data berhasil di ubah", "Success");
+                            LoadTableData("User","","");
+                            UbahTambahUserDialog.setVisible(false);
+                        } else {
+                            System.out.println("data gagal di update");
+                            Master.showTholutDialogOk("Failed", "Data gagal di ubah", "Failed");
+                        }
                     } else {
-                        System.out.println("data gagal di update");
-                        Master.showTholutDialogOk("Failed", "Data gagal di ubah", "Failed");
+                        System.out.println("mantap kuy username kepake");
+                        Master.showTholutDialogOk("Peringatan", "Maaf username sudah digunakan", "Warning");
                     }
                 } catch (SQLException ex) {
                     System.out.println(ex);
@@ -9199,10 +9254,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void UTKasetNamaInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UTKasetNamaInputKeyTyped
         // TODO add your handling code here:
-        char whatis = evt.getKeyChar();
-        if(!(Character.isLetter(whatis) || (whatis == KeyEvent.VK_SPACE) || (whatis == KeyEvent.VK_BACK_SPACE) || (whatis == KeyEvent.VK_DELETE))) {
-            evt.consume();
-        }
+        
     }//GEN-LAST:event_UTKasetNamaInputKeyTyped
 
     private void UTUserNMLengkapInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UTUserNMLengkapInputKeyTyped
@@ -9303,6 +9355,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void NotifJatuhTempo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NotifJatuhTempo1MouseClicked
         // TODO add your handling code here:
+        ButtonSwitchPanel("Sewa");
     }//GEN-LAST:event_NotifJatuhTempo1MouseClicked
 
     private void NotifJatuhTempo1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NotifJatuhTempo1MouseEntered
