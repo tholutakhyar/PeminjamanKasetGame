@@ -9,5 +9,5 @@ My Final Project, Warning This Project is not Finished
 # Free To Take
 Feel free to take this project! don't forget to give credits ( if you want :) )
 
-- Tholut Akhyar (http://tholutakhyar.pe.hu)
+- Tholut Akhyar ([http://tx.ba-ka.org](https://tx.ba-ka.org/))
 - SMK PGRI 3 Malang
